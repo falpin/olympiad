@@ -1,6 +1,34 @@
-@media (max-width: 425px) {
-	.icons {
+@media (min-width: 320px) and (max-width: 767px) {
+	.icons,
+	.add-container > div > h1,
+	.list-container > div > div > h5 {
 		display: none;
+	}
+
+	.logo,
+	.line,
+	.school-container > div > h4,
+	.school-container > div > div > h4,
+	.list-container > h2 {
+		font-size: var(--h5);
+	}
+
+	.logo > span,
+	.add-container > div > h3,
+	.content-btn,
+	.olymp > h4,
+	.school-container > div > h5,
+	.school-container > div > div > h5,
+	.subject > h5,
+	.subject > p,
+	.list-container > div > div > h3,
+	.list-container > div > div > h3  {
+		font-size: var(--h6);
+	}
+
+	.olymp > h5,
+	.list-container > div > div > h4  {
+		font-size: var(--p);
 	}
 
 	header {
@@ -9,18 +37,11 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 10px;
-		padding: 30px 15px;
+		padding: 30px 20px;
 	}
 
 	.logo {
-		color:#795548;
 		align-items: center;
-		font-size: var(--h5);
-		font-weight: 600;
-	}
-
-	.logo > span {
-		font-size: var(--h6);
 	}
 
 	nav > div,
@@ -32,17 +53,8 @@
 		margin-top: 20px;
 	}
 
-	.mobile > a {
-		font-weight: 600;
-		color:#795548;
-	}
-
-	.mobile > a:hover {
-		color: #4D3830;
-	}
-
 	.add-container {
-		padding: 40px 15px;
+		padding: 40px 0;
 	}
 
 	.add-container > div {
@@ -50,41 +62,22 @@
 	}
 
 	.add-container > div > h3 {
-		font-size: var(--h6);
-	}
-
-	.add-container > div > h3 {
 		width: 290px;
 	}
 
-	.add-container > div > h1 {
-		display: none;
-	}
-
 	.content-btn {
-		font-size: var(--h6);
 		padding: 10px 60px;
 	}
 
 	main {
-		margin: 40px 15px;
+		margin: 40px 20px;
 	}
 
 	.line {
-		font-size: var(--h5);
-	}
-
-	.olymp {
-		margin: 20px 0;
-		width: 290px;
-	}
-
-	.olymp > h4 {
-		font-size: var(--h6);
+		margin-bottom: 20px;
 	}
 
 	.olymp > h5 {
-		font-size: var(--p);
 		padding: 10px 0;
 	}
 
@@ -94,20 +87,8 @@
 		gap: 40px;
 	}
 
-
 	.school-container {
 		margin: 40px 0;
-	}
-
-	.school-container > div > h5,
-	.school-container > div > div > h5
-	{
-		font-size: var(--h6);
-	}
-
-	.school-container > div > h4,
-	.school-container > div > div > h4{
-		font-size: var(--h5);
 	}
 
 	.school-container > div > div {
@@ -116,27 +97,15 @@
 
 	.school-container > div > div > h5 {
 		margin: 10px 0;
-		font-weight: normal;
 	}
 
 	.school-container > div > h5 {
-		font-weight: normal;
-		margin-top: 20px;
-	}
-
-	.subject > h5,
-	.subject > p {
-		font-size: var(--h6);
-	}
-
-	.subject{
 		margin-top: 20px;
 	}
 
 	.future-container {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		gap: 10px;
 	}
 
@@ -145,6 +114,7 @@
 		flex-direction: column;
 		text-align: center;
 		gap: 20px;
-		padding: 40px 15px;
+		padding: 40px 20px;
+	}
 	}
 }
