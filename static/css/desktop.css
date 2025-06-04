@@ -1,0 +1,130 @@
+@media (min-width: 1440px) {
+	.mobile {
+		display: none;
+	}
+
+	header, footer {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: center;
+		gap: 5px;
+		padding: 40px 240px;
+	}
+
+	.add-container > div > h1 {
+		font-size: var(--h1);
+	}
+
+	.line,
+	.list-container > h2 {
+		font-size: var(--h2);
+	}
+
+	.add-container > div > h3,
+	.list-container > div > div > h3 {
+		font-size: var(--h3);
+	}
+
+	.olymp > h4,
+	.school-container > div > h4,
+	.school-container > div > div > h4,
+	.list-container > div > div > h4  {
+		font-size: var(--h4);
+	}
+
+	.logo,
+	.olymp > h5,
+	.school-container > div > h5,
+	.school-container > div > div > h5,
+	.subject > h5,
+	.subject > p,
+	.list-container > div > div > h5  {
+		font-size: var(--h5);
+	}
+
+	nav > div > a {
+		font-size: var(--h6);
+	}
+
+	.logo > span {
+		font-size: var(--p);
+	}
+
+	nav > div {
+		display: flex;
+		flex-direction: row;
+		gap: 40px;
+	}
+
+	.icons {
+		display: flex;
+		flex-direction: row;
+		gap: 40px;
+	}
+
+	.add-container {
+		padding: 60px 240px;
+	}
+
+	.add-container > div {
+		gap: 40px;
+	}
+
+	.add-container > div > h3:first-child {
+		width: 600px;
+	}
+
+	button {
+		font-size: var(--h5);
+		padding: 20px 100px;
+	}
+
+	main {
+		margin: 100px 240px;
+	}
+
+	.line {
+		margin-bottom: 40px;
+	}
+
+	.olymp {
+		width: 575px;
+	}
+
+	.olymp > h5 {
+		padding: 10px 0;
+	}
+
+	.calendar-container {
+	  min-width: 400px;
+	}
+
+	aside {
+		width: 400px;
+	}
+
+	.first-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.future-container {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	.school-container {
+		margin: 60px 0;
+	}
+
+	.school-container > div > div {
+		margin: 40px 0;
+	}
+
+	.school-container > div > div > h5 {
+		margin: 10px 0;
+	}
