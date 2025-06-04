@@ -116,5 +116,31 @@
 		gap: 20px;
 		padding: 40px 20px;
 	}
+
+	.list-container > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 20px;
+		align-items: center;
 	}
+
+	.list-container > div > div{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-bottom: 20px;
+	}
+
+	.list-container > h2 {
+		margin-bottom: 40px;
+	}
+
+	.animated-path {
+		width: 25px;
+		height: 25px;
+	}
+
+
+
 }
