@@ -25,6 +25,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+function updateCounters() {
+  const counters = document.querySelectorAll(".counter-text");
+  counters.forEach((text, index) => {
+    text.textContent = index + 1; // Нумерация с 1
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  updateCounters(); // Вызываем при загрузке страницы
+});
+
 // пример кода для календаря
 const monthYear = document.getElementById("month-year");
 const calendarDays = document.getElementById("calendar-days");
