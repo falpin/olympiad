@@ -29,14 +29,6 @@
 	font-family: "Fira Sans", sans-serif;
 }
 
-.bold {
-	font-weight: 600;
-}
-
-.normal {
-	font-weight: 400;
-}
-
 .orange {
 	color: var(--orange);
 }
@@ -60,8 +52,8 @@ footer,
 
 .logo {
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
+	justify-content: center;
 	gap: 5px;
 	color: var(--brown);
 	transition: color 0.3s ease;
@@ -76,14 +68,15 @@ footer,
 }
 
 nav > div > a:hover,
-.arrow > a:hover {
+.arrow > a:hover,
+.arrow > h5:hover {
 	color: #4D3830;
 }
 
 .icon-link {
-  display: inline-flex;
-  transition: color 0.3s ease;
-  color: var(--brown);
+	display: inline-flex;
+	transition: color 0.3s ease;
+	color: var(--brown);
 }
 
 .add-container {
@@ -91,8 +84,6 @@ nav > div > a:hover,
 }
 
 .add-container > div {
-	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
@@ -123,14 +114,8 @@ nav > div > a:hover,
 }
 
 .arrow {
-	display: flex;
-	flex-direction: row;
-	gap: 10px;
 	align-items: center;
-}
-
-.arrow > a {
-	font-size: var(--p);
+	gap: 10px;
 }
 
 .arrow > .custom-icon {
@@ -141,9 +126,7 @@ nav > div > a:hover,
 	transform: translateX(10px);
 }
 
-.olymp {
-	display: flex;
-	flex-direction: column;
+.add-olymp {
 	border-bottom: solid var(--brown) 1px;
 }
 
@@ -152,10 +135,6 @@ nav > div > a:hover,
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 10px;
-}
-
-#month-year {
-	font-size: var(--h5);
 }
 
 .icon-button {
@@ -242,18 +221,10 @@ nav > div > a:hover,
 }
 
 .subject {
-	display: flex;
-	flex-direction: column;
 	gap: 10px;
 }
 
-footer > p {
-	font-size: var(--p);
-}
-
 .heart-section {
-	display: flex;
-	flex-direction: row;
 	align-items: flex-start;
     gap: 8px;
     cursor: pointer;
@@ -277,11 +248,6 @@ footer > p {
     display: none !important;
 }
 
-.first-block {
-	display: flex;
-	flex-direction: column;
-}
-
 .cancel-event > p,
 .contacts a {
 	color: #AAA09D;
@@ -291,14 +257,21 @@ footer > p {
 	color: var(--yellow);
 }
 
-.contacts > a {
-	display: flex;
-	flex-direction: column;
-} 
-
 .number {
-	display: flex;
-	flex-direction: row;
 	align-items: center;
 	margin-bottom: 20px;
+}
+
+.lib-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.lib-card {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	background: #FFF5EE;
+	border-radius: 5px;
 }
