@@ -12,59 +12,6 @@
 		padding: 40px 240px;
 	}
 
-	.add-container > div > h1 {
-		font-size: var(--h1);
-	}
-
-	.line,
-	.list-container > h2,
-	.title > div > h2,
-	.news h2,
-	.zagolovok h2 {
-		font-size: var(--h2);
-	}
-
-	.add-container > div > h3,
-	.list-container > div > div > h3,
-	.blocks h3,
-	.news h3 {
-		font-size: var(--h3);
-	}
-
-	.olymp > h4,
-	.school-container > div > h4,
-	.school-container > div > div > h4,
-	.list-container > div > div > h4,
-	.news h4 {
-		font-size: var(--h4);
-	}
-
-	.logo,
-	.olymp > h5,
-	.school-container > div > h5,
-	.school-container > div > div > h5,
-	.subject > h5,
-	.subject > p,
-	.list-container > div > div > h5,
-	.title > div > h5,
-	.blocks h5,
-	.cancel-event > p,
-	.news h5,
-	.zagolovok h5,
-	.text > h5,
-	.surname > p {
-		font-size: var(--h5);
-	}
-
-	nav > div > a,
-	.blocks a {
-		font-size: var(--h6);
-	}
-
-	.logo > span {
-		font-size: var(--p);
-	}
-
 	nav > div {
 		display: flex;
 		flex-direction: row;
@@ -102,16 +49,16 @@
 		margin-bottom: 40px;
 	}
 
-	.olymp {
+	.add-olymp {
 		width: 575px;
 	}
 
-	.olymp > h5 {
+	.add-olymp > h5 {
 		padding: 10px 0;
 	}
 
 	.calendar-container {
-	  min-width: 400px;
+		min-width: 400px;
 	}
 
 	aside {
@@ -263,4 +210,13 @@
 		margin: 60px 0;
 	}
 
+	.lib-cards {
+		margin-top: 60px;
+	}
+
+	.lib-card {
+		gap: 20px;
+		flex: 0 0 calc(33.333% - 20px);
+		padding: 30px;
+	}
 }

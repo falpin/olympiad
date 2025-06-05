@@ -5,41 +5,6 @@
 		display: none;
 	}
 
-	.logo,
-	.line,
-	.school-container > div > h4,
-	.school-container > div > div > h4,
-	.list-container > h2,
-	.title h2,
-	.news h2 {
-		font-size: var(--h5);
-	}
-
-	.logo > span,
-	.add-container > div > h3,
-	.content-btn,
-	.olymp > h4,
-	.school-container > div > h5,
-	.school-container > div > div > h5,
-	.subject > h5,
-	.subject > p,
-	.list-container > div > div > h3,
-	.list-container > div > div > h3,
-	.blocks h3,
-	.news h3 {
-		font-size: var(--h6);
-	}
-
-	.olymp > h5,
-	.list-container > div > div > h4,
-	.title h5,
-	.blocks h5,
-	.cancel-event > p,
-	.blocks a,
-	.news h4 {
-		font-size: var(--p);
-	}
-
 	header {
 		display: flex;
 		justify-content: center;
@@ -86,7 +51,7 @@
 		margin-bottom: 20px;
 	}
 
-	.olymp > h5 {
+	.add-olymp > h5 {
 		padding: 10px 0;
 	}
 
@@ -141,7 +106,7 @@
 		margin-bottom: 20px;
 	}
 
-	.list-container > h2 {
+		.list-container > h2 {
 		margin-bottom: 40px;
 	}
 
@@ -219,6 +184,16 @@
 
 	.news > div > div > h4 {
 		margin-bottom: 10px;
+	}
+
+	.lib-cards {
+		margin-top: 20px;
+	}
+
+	.lib-card {
+		gap: 10px;
+		flex: 0 0 100%;
+		padding: 20px;
 	}
 
 }
