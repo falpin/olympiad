@@ -1,0 +1,49 @@
+.mb-60 {
+	margin-bottom: 60px;
+}
+
+.mb-40 {
+	margin-bottom: 40px;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.mb-10 {
+	margin-bottom: 10px;
+}
+
+.mt-60 {
+	margin-top: 60px;
+}
+
+.mt-40 {
+	margin-top: 40px;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+	.gap-10-20 {
+		gap: 10px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+	.gap-10-20 {
+		gap: 20px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.gap-10-20 {
+		gap: 20px;
+	}
+}
