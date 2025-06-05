@@ -7,7 +7,8 @@
 	.line,
 	.school-container > div > h4,
 	.school-container > div > div > h4,
-	.list-container > h2 {
+	.list-container > h2,
+	.title h2 {
 		font-size: var(--h4);
 	}
 
@@ -20,12 +21,17 @@
 	.subject > h5,
 	.subject > p,
 	.list-container > div > div > h3,
-	.list-container > div > div > h3  {
+	.list-container > div > div > h3,
+	.blocks h3  {
 		font-size: var(--h5);
 	}
 
 	.olymp > h5,
-	.list-container > div > div > h4 {
+	.list-container > div > div > h4,
+	.title h5,
+	.blocks h5,
+	.cancel-event > p,
+	.blocks a {
 		font-size: var(--h6);
 	}
 
@@ -139,4 +145,65 @@
 		margin-bottom: 40px;
 	}
 	
+
+	.title {
+		background-color: #FFF5EE;
+		padding: 20px;
+		display: flex;
+		flex-direction: row;
+		border-radius: 5px;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+
+	.blocks {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+		justify-content: center;
+	}
+
+	.blocks h3 {
+		margin-bottom: 20px;
+	}
+
+	.title > div > h5 {
+		margin: 20px 0;
+	}
+
+	.first-block {
+		margin-top: 40px;
+		gap: 20px;
+	}
+
+	.first-block > div > h3,
+	.first-block > div > div > h5,
+	.cancel-event > h5 {
+		margin-bottom: 20px;
+	}
+
+	.cancel-event {
+		margin-top: 20px;
+	}
+
+	.name-desktop {
+		display: none;
+	}
+
+	.second-block {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 40px;
+	}
+
+	.number {
+		gap: 10px;
+	}
+
+	.contacts > a {
+		margin: 20px 0;
+	} 
+
 }

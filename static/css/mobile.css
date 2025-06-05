@@ -202,4 +202,8 @@
 		gap: 10px;
 	}
 
+	.contacts > a {
+		margin: 10px 0;
+	} 
+
 }
