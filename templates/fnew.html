@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Новость</title>
+	<link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+	{% include 'header.html' %}
+	<main>
+		<div class="zagolovok">
+			<h2>Итоги олимпиады по веб-разработке</h2>
+			<h5>
+				<span>5 мая 2025</span>
+				,
+				<span>10:30</span>
+			</h5>
+		</div>
+		<section class="text">
+			<h5 class="normal">
+				Так, на реке Хеу, притоке Черека, при помощи рейки и глазомера школьники измеряли характеристики моста 
+				и наносили его на топокарту; определяли азимут на Мекку; 
+				отгадывали разные горные породы Кавказа; 
+				смотрели, как добывают песок, гравий и гальку в долине Черека; 
+				рассказывали про способы земледелия и сельского хозяйства; 
+				мерили и классифицировали обломочные породы; 
+				по формуле состава минеральной воды рассчитывали ее водородный показатель и определяли тип источников.
+			</h5>
+		</section>
+		<section class="surname">
+			<p class="bold">
+				Анастасия З., 11 класс, Москва:
+			</p>
+		</section>
+		<img src="../static/img/image.png" alt="">
+	</main>
+	{% include 'footer.html' %}
+	<script src="../static/js/script.js"></script>
+</body>
+</html>
