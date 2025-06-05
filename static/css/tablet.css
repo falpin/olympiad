@@ -8,7 +8,8 @@
 	.school-container > div > h4,
 	.school-container > div > div > h4,
 	.list-container > h2,
-	.title h2 {
+	.title h2,
+	.news h2 {
 		font-size: var(--h4);
 	}
 
@@ -22,7 +23,9 @@
 	.subject > p,
 	.list-container > div > div > h3,
 	.list-container > div > div > h3,
-	.blocks h3  {
+	.blocks h3,
+	.news h3,
+	.news h4 {
 		font-size: var(--h5);
 	}
 
@@ -31,7 +34,8 @@
 	.title h5,
 	.blocks h5,
 	.cancel-event > p,
-	.blocks a {
+	.blocks a,
+	.news h5 {
 		font-size: var(--h6);
 	}
 
@@ -204,6 +208,18 @@
 
 	.contacts > a {
 		margin: 20px 0;
+	}
+
+	.news > div > h2 {
+		margin-bottom: 40px;
+	}
+
+	.news > div > h3 {
+		margin-bottom: 40px;
+	}
+
+	.news > div > div > h4 {
+		margin-bottom: 20px;
 	} 
 
 }
