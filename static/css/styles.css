@@ -287,3 +287,22 @@ img {
 	background: #FFF5EE;
 	border-radius: 5px;
 }
+
+.reg {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.reg-inputs {
+	display: flex;
+	flex-direction: column;
+}
+
+.reg-inputs input {
+	border: 1px solid rgb(121, 85, 72);
+	border-radius: 5px;
+	background: rgb(255, 245, 238);
+	padding: 10px;
+}
+

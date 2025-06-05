@@ -207,4 +207,8 @@
 		padding: 20px;
 	}
 
+
+	.reg-inputs {
+		gap: 10px;
+	}
 }
