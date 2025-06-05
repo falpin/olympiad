@@ -1,6 +1,9 @@
 @import url('mobile.css');
 @import url('desktop.css');
 @import url('tablet.css');
+@import url('fonts.css');
+@import url('card.css');
+@import url('spacing.css');
 
 :root {
 	--h1: 72px;
