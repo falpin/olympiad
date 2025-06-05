@@ -1,3 +1,30 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const heartSection = document.querySelector('.heart-section');
+    if (!heartSection) return;
+
+    const emptyHeart = heartSection.querySelector('.empty-heart');
+    const filledHeart = heartSection.querySelector('.filled-heart');
+    const addText = heartSection.querySelector('.add-text');
+    const savedText = heartSection.querySelector('.saved-text');
+
+    heartSection.addEventListener('click', () => {
+        if (emptyHeart.style.display === 'none') {
+            // Переключаем на пустое сердце
+            emptyHeart.style.display = 'block';
+            filledHeart.style.display = 'none';
+            addText.style.display = 'inline';
+            savedText.style.display = 'none';
+        } else {
+            // Переключаем на заполненное сердце
+            emptyHeart.style.display = 'none';
+            filledHeart.style.display = 'block';
+            addText.style.display = 'none';
+            savedText.style.display = 'inline';
+        }
+    });
+});
+
+
 // пример кода для календаря
 const monthYear = document.getElementById("month-year");
 const calendarDays = document.getElementById("calendar-days");
@@ -100,3 +127,6 @@ document.getElementById("next-month").addEventListener("click", () => {
 
 // Инициализация
 renderCalendar(currentDate);
+
+
+
