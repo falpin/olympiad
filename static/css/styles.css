@@ -262,6 +262,18 @@ nav > div > a:hover,
 	margin-bottom: 20px;
 }
 
+.text-fnew {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .lib-cards {
   display: flex;
   flex-wrap: wrap;

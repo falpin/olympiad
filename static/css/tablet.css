@@ -186,6 +186,17 @@
 		margin-bottom: 20px;
 	} 
 
+	.text-fnew {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-top: 40px;
+	}
+
+	.surname > p {
+		margin-bottom: 20px;
+	}
+
 	.lib-cards {
 		margin-top: 40px;
 	}
