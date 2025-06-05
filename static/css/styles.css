@@ -67,7 +67,7 @@ footer,
 .logo:hover,
 .icon-link:hover,
 .mobile > a:hover,
-.first-block > div > div > h4 > span,
+.first-block > div > div > h5 > span,
 .first-block a:hover  {
 	color: var(--orange);
 }
@@ -274,16 +274,9 @@ footer > p {
     display: none !important;
 }
 
-.blocks {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
 .first-block {
 	display: flex;
 	flex-direction: column;
-	gap: 100px;
 }
 
 .cancel-event > p,
@@ -298,5 +291,11 @@ footer > p {
 .contacts > a {
 	display: flex;
 	flex-direction: column;
-	margin: 20px 0;
 } 
+
+.number {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 20px;
+}
