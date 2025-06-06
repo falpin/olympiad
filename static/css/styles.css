@@ -37,6 +37,10 @@
 	color: var(--green);
 }
 
+.gray {
+	color: #AAA09D;
+}
+
 body,
 button,
 a {
@@ -308,4 +312,25 @@ img {
 	outline: none;
 }
 
+.answer-opt {
+	display: flex;
+	flex-direction: column;
+}
 
+.test-btn {
+  border: 1px solid var(--brown);
+  border-radius: 5px;
+  padding: 10px;
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.test-btn:hover {
+  border-color: #4D3830;
+}
+
+.test-btn.active {
+  border-color: var(--brown);
+  background-color: #D7CCC8;
+}

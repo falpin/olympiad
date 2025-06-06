@@ -207,7 +207,6 @@
 		padding: 20px;
 	}
 
-
 	.reg-inputs {
 		gap: 10px;
 	}
@@ -229,5 +228,14 @@
 	.reg {
 		display: flex;
 		order: 2;
+	}
+
+	.test-title {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.test-btn {
+	  margin-bottom: 10px;
 	}
 }
