@@ -125,6 +125,18 @@ function selectDay(clickedDay, events) {
   }
 }
 
+const buttons = document.querySelectorAll('.test-btn');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Удаляем класс active у всех кнопок
+    buttons.forEach(btn => btn.classList.remove('active'));
+    // Добавляем только на ту, которую нажали
+    button.classList.add('active');
+  });
+});
+
+
 // Переключение месяцев
 document.getElementById("prev-month").addEventListener("click", () => {
   currentDate.setMonth(currentDate.getMonth() - 1);
