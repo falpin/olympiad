@@ -203,7 +203,7 @@
 		margin-bottom: 20px;
 	}
 
-	.fnew > img	{
+	.fnew > img {
 		margin: 60px 0;
 	}
 
@@ -283,5 +283,37 @@
 		margin: 60px 0;
 	}
 
+	.student {
+		display: flex;
+		flex-direction: row;
+		gap: 60px;
+	}
 
+	.student > div {
+		gap: 20px;
+	}
+
+	.student-col {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 100px;
+	}
+
+	.student-col > div {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.student-col > div > div {
+		gap: 20px;
+	}
+
+/*	.student > img {
+	  width: 100%;
+	  height: auto;
+	  object-fit: cover;
+	}
+*/
 }

@@ -286,4 +286,29 @@
 		margin: 40px 40px;
 	}
 
+	.student {
+		display: flex;
+		flex-direction: row;
+		gap: 40px;
+	}
+
+	.student > div {
+		gap: 20px;
+	}
+
+	.student-col {
+		display: flex;
+		flex-direction: row;
+		margin-top: 100px;
+	}
+
+	.student-col > div {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.student-col > div > div {
+		gap: 20px;
+	}
 }
