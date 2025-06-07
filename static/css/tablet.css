@@ -124,7 +124,6 @@
 		justify-content: space-between;
 	}
 
-
 	.blocks {
 		display: flex;
 		flex-direction: column;
@@ -193,6 +192,10 @@
 		margin-top: 40px;
 	}
 
+	.fnew > img	{
+		margin: 40px 0;
+	}
+
 	.surname > p {
 		margin-bottom: 20px;
 	}
@@ -240,4 +243,38 @@
 	  	margin-bottom: 20px;
 	    width: 70%;
 	}
+
+	.do-title {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 60px;
+	}
+
+	.do-title > div {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.do-answer {
+		padding: 40px;
+		gap: 40px;
+	}
+
+	.name {
+		gap: 10px;
+	}
+
+	.img-answer {
+		width: 300px;
+		height: 300px;
+		overflow: hidden;
+	}
+
+	.answer-btn > input {
+		padding: 10px;
+	}
+
 }

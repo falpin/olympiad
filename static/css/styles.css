@@ -272,7 +272,7 @@ nav > div > a:hover,
 	gap: 20px;
 }
 
-img {
+.fnew{
   max-width: 100%;
   height: auto;
 }
@@ -333,4 +333,49 @@ img {
 .test-btn.active {
   border-color: var(--brown);
   background-color: #D7CCC8;
+}
+
+.timer {
+	background-color: var(--yellow);
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	width: 100px;
+	height: 50px;
+}
+
+.do-answer {
+	background-color: #FFF5EE;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.name {
+	display: flex;
+	flex-direction: column;
+}
+
+.img-answer {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-answer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.answer-btn > input {
+	border-radius: 8px;
+	border: 1px solid var(--brown);
+	border-radius: 5px;
+	background: #FFFFFF;
+	transition: border-color 0.3s ease;
+	outline: none;
 }

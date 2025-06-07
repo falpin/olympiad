@@ -193,6 +193,10 @@
 		margin-top: 20px;
 	}
 
+	.fnew > img	{
+		margin: 20px 0;
+	}
+
 	.surname > p {
 		margin-bottom: 20px;
 	}
@@ -238,4 +242,37 @@
 	.test-btn {
 	  margin-bottom: 10px;
 	}
+
+	.do-title {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		margin-bottom: 60px;
+	}
+
+	.do-title > div {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.do-answer {
+		padding: 20px;
+		gap: 20px;
+	}
+
+	.name {
+		gap: 5px;
+	}
+
+	.img-answer {
+		width: 200px;
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.answer-btn > input {
+		padding: 5px;
+	}
+
 }
