@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Проведение олимпиады</title>
+	<link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+	{% include 'header.html' %}
+	<main>
+		<section>
+			<div class="do-title">
+				<div>
+					<h2 class="h2 bold">
+						Олимпиада по веб-разработке
+					</h2>
+					<h5 class="h5 bold gray">
+						<span>Всего 5 вопросов</span>
+					</h5>
+				</div>
+				<div>
+					<button class="timer h5 bold">60:00</button>
+				</div>
+			</div>
+			<div class="do-answer">
+				<div class="name">
+					<h5 class="h5 bold">Задание 1</h5>
+					<p class="p normal gray">1 балл</p>
+				</div>
+				<div>
+					<h6 class="h6 normal">
+						Утром вылупилось 7 цыплят, а вечером — ещё 3 цыплёнка. Сколько цыплят вылупилось?
+					</h6>
+				</div>
+				<div class="img-answer">
+					<img src="../static/img/image2.png" alt="прмиерная">
+				</div>
+				<div class="answer-btn">
+					<input class="h5" type="text" name="answer" placeholder="Ответ" required>
+				</div>
+			</div>
+			<button class="content-btn h5 bold mt-40">Отправить</button>
+		</section>
+	</main>
+	{% include 'footer.html' %}
+	<script src="../static/js/script.js"></script>
+</body>
+</html>
