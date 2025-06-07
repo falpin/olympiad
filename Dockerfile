@@ -1,8 +1,8 @@
 FROM python:3.9-slim
 
-WORKDIR /var/www/game-sense.net
+WORKDIR /var/www/olympiad.falpin.ru
 
-VOLUME /var/www/game-sense.net
+VOLUME /var/www/olympiad.falpin.ru
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
