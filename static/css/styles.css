@@ -41,6 +41,10 @@
 	color: #AAA09D;
 }
 
+main {
+	min-height: 100vh;
+}
+
 body,
 button,
 a {
