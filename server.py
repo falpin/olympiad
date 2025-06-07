@@ -54,5 +54,9 @@ def test():
 def do_olymp():
     return render_template('do-olymp.html')
 
+@app.route('/profile-st')
+def student():
+    return render_template('profile-st.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
