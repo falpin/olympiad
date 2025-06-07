@@ -273,4 +273,9 @@
 	.answer-btn > input {
 		padding: 10px;
 	}
+
+	.results {
+		padding: 20px 240px;
+	}
+
 }

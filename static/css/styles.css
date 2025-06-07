@@ -379,3 +379,10 @@ nav > div > a:hover,
 	transition: border-color 0.3s ease;
 	outline: none;
 }
+
+.results {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background-color: #FFF5EE;
+}
