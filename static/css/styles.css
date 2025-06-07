@@ -390,3 +390,22 @@ nav > div > a:hover,
 	gap: 20px;
 	background-color: #FFF5EE;
 }
+
+.empty-fav {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.empty-fav > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-fav > div > h2,
+.empty-fav > div > h4 {
+	text-align: center;
+}
+
+

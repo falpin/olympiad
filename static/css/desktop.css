@@ -278,4 +278,10 @@
 		padding: 20px 240px;
 	}
 
+	.empty-fav {
+		gap: 40px;
+		margin: 60px 0;
+	}
+
+
 }

@@ -281,4 +281,9 @@
 		padding: 40px 40px;
 	}
 
+	.empty-fav {
+		gap: 40px;
+		margin: 40px 40px;
+	}
+
 }
