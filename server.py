@@ -40,21 +40,19 @@ def fnew():
 
 @app.route('/register')
 def reg():
-    return render_template('registration.html')
+    return render_template('register.html')
 
-@app.route('/treg')
+@app.route('/tregister')
 def teach_reg():
-    return render_template('teach-reg.html')
+    return render_template('tregister.html')
 
-@app.route('/tlog')
+@app.route('/tlogin')
 def teach_log():
-    return render_template('teach-log.html')
+    return render_template('tlogin.html')
 
 @app.route('/test')
 def test():
     return render_template('test.html')
-
-
 
 @app.route('/profile-st')
 def student():
