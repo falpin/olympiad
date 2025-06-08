@@ -112,9 +112,17 @@ nav > div > a:hover,
 }
 
 .content-btn:hover {
-	transform: translateY(5px);
+	transform: translateY(3px);
 	box-shadow: none;
+	box-shadow: 0 3px 6px rgba(255, 152, 0, 0.2);
+	background-color: #E3A857; 
 }
+
+.content-btn:active {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
 
 .line {
 	display: inline-block;
@@ -233,14 +241,15 @@ nav > div > a:hover,
 }
 
 .heart-section {
-	align-items: flex-start;
+    display: flex;
+    align-items: center;
     gap: 8px;
     cursor: pointer;
 }
 
 .animated-path {
-    stroke-width: 2;
     transition: all 0.4s ease;
+    flex-shrink: 0;
 }
 
 .animated-path:hover {
@@ -249,11 +258,14 @@ nav > div > a:hover,
 }
 
 .filled-heart {
-	display: none;
+    display: none;
 }
 
-.mobile-only {
-    display: none !important;
+.add-text {
+    display: inline;
+}
+.saved-text {
+    display: none;
 }
 
 .cancel-event > p,
