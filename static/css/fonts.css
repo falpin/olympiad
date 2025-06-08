@@ -1,7 +1,39 @@
+:root {
+	--h1: 72px;
+	--h2: 42px;
+	--h3: 36px;
+	--h4: 32px;
+	--h5: 24px;
+	--h6: 20px;
+	--p: 18px;
+	--brown: #795548;
+	--light-brown:#AAA09D;
+	--dark-brown: #4D3830;
+	--orange: #D95707;
+	--green:#4F7948;
+	--yellow: #FFB952;
+}
+
+.orange {
+	color: var(--orange);
+}
+
+.green {
+	color: var(--green);
+}
+
+.gray {
+	color: var(--light-brown);
+}
+
+.brown {
+	color: var(--brown);
+}
+
 .bold {font-weight: 600;}
 .normal {font-weight: 400;}
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
 	.h1 {font-size: var(--p);}
 	.h2 {font-size: var(--h5);}
 	.h3 {font-size: var(--h6);}
