@@ -325,6 +325,26 @@ footer,
 	flex-direction: column;
 }
 
+.feedback-container {
+  margin: 10px 0;
+}
+
+.feedback-text {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feedback-text.correct {
+  color: var(--green);
+}
+
+.feedback-text.incorrect {
+  color: var(--red);
+}
+
 .test-btn {
   border: 1px solid var(--brown);
   border-radius: 5px;
@@ -332,22 +352,29 @@ footer,
   background: none;
   cursor: pointer;
   transition: border-color 0.3s ease, background-color 0.3s ease;
+  width: 100%;
+  margin: 5px 0;
 }
 
 .test-btn:hover {
   border-color: #4D3830;
 }
 
-.test-btn.active {
-  border-color: var(--brown);
-  background-color: #D7CCC8;
+.test-btn.correct {
+  border-color: var(--green);
+  background-color: #e8f5e9;
+}
+
+.test-btn.incorrect {
+  border-color: var(--red);
+  background-color: #ffebee;
 }
 
 .timer {
 	background-color: var(--yellow);
 	border: none;
 	border-radius: 5px;
-	padding: 10px 20px;
+	padding: 10px 10px;
 	width: 100px;
 	height: 50px;
 }
