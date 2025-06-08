@@ -277,6 +277,10 @@
 		overflow: hidden;
 	}
 
+	.answer-opt {
+		width: 80%;
+	}
+
 	.answer-btn > input {
 		padding: 10px;
 	}
