@@ -1,21 +1,40 @@
 <header>
-	<div>
-		<a href="/" class="h5 logo bold"> 
-			ЧЭнК.Олимпиады
-			<span class="p">От колледжа ЧЭнК</span>
-		</a>
+	<div class="header-top">
+	    <a href="/" class="h5 logo bold"> 
+	        ЧЭнК.Олимпиады
+	        <span class="p">От колледжа ЧЭнК</span>
+	    </a>
+	    <button class="burger" aria-label="Открыть меню">
+	        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	            <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+	            <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+	            <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+	        </svg>
+	    </button>
 	</div>
 	<nav>
-		<div>
-			<a href="/olympiads" class="h6 bold">Олимпиады</a>
-			<a href="/news" class="h6 bold">Новости</a>
-			<a href="/library" class="h6 bold">Библиотека</a>
-			<div class="mobile">
-				<a href="/favorites" class="h6 bold">Избранное</a>
-				<a href="/login" class="h6 bold">Профиль</a>
-			</div>
-		</div>
+	    <div class="desktop-nav">
+	        <a href="/olympiads" class="h6 bold">Олимпиады</a>
+	        <a href="/news" class="h6 bold">Новости</a>
+	        <a href="/library" class="h6 bold">Библиотека</a>
+	    </div>
 	</nav>
+	<nav class="mobile-menu">
+	    <div class="mobile-menu-content">
+	        <button class="close-btn" aria-label="Закрыть меню">
+	            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	                <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+	                <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+	            </svg>
+	        </button>
+	        <a href="/olympiads" class="h6 bold">Олимпиады</a>
+	        <a href="/news" class="h6 bold">Новости</a>
+	        <a href="/library" class="h6 bold">Библиотека</a>
+	        <a href="/favorites" class="h6 bold">Избранное</a>
+	        <a href="/login" class="h6 bold">Профиль</a>
+	    </div>
+	</nav>
+
 	<div class="icons">
 		<a href="/favorites" class="icon-link">
 		  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
