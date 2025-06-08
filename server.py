@@ -26,27 +26,27 @@ def favorites():
 def login():
     return render_template('login.html')
 
-
-
-
-
-@app.route('/olymp')
+@app.route('/olympiada')
 def olympiada():
 	return render_template('olympiada.html')
 
-@app.route('/fnew')
+@app.route('/online-olympiad')
+def do_olymp():
+    return render_template('online-olympiad.html')
+
+@app.route('/news-page')
 def fnew():
-    return render_template('fnew.html')
+    return render_template('news-page.html')
 
 @app.route('/register')
 def reg():
     return render_template('registration.html')
 
-@app.route('/teach-reg')
+@app.route('/treg')
 def teach_reg():
     return render_template('teach-reg.html')
 
-@app.route('/teach-log')
+@app.route('/tlog')
 def teach_log():
     return render_template('teach-log.html')
 
@@ -54,9 +54,7 @@ def teach_log():
 def test():
     return render_template('test.html')
 
-@app.route('/do-olymp')
-def do_olymp():
-    return render_template('do-olymp.html')
+
 
 @app.route('/profile-st')
 def student():
