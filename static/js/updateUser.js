@@ -30,7 +30,6 @@ function updateUserData() {
     .then(result => {
         updateProfileLink();
         localStorage.setItem('user', JSON.stringify(result));
-        console.log(localStorage)
 
         const userData = localStorage.getItem('user');    
         const user = JSON.parse(userData);

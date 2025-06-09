@@ -21,6 +21,7 @@ main {
 body,
 button,
 a {
+	transition: color 0.3s ease;
 	color: var(--brown);
 }
 
@@ -51,7 +52,7 @@ footer,
 .desktop-nav a:hover,
 .arrow > a:hover,
 .arrow > h5:hover {
-	color: var(--dark-brown);
+	color: var(--orange);
 }
 
 .icon-link {
@@ -313,6 +314,15 @@ footer,
 }
 
 .reg-inputs input {
+	border: 1px solid #AAA09D;
+	border-radius: 5px;
+	background: rgb(255, 245, 238);
+	padding: 10px;
+	transition: border-color 0.3s ease;
+	outline: none;
+}
+
+input {
 	border: 1px solid #AAA09D;
 	border-radius: 5px;
 	background: rgb(255, 245, 238);

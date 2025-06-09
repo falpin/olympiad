@@ -5,34 +5,11 @@
 	<h2 class="h2 bold">Библиотека материалов</h2>
 	<h3 class="h3 bold">Пробуй повторять темы с помощью тестов</h3>
 </div>
-<section class="lib-cards">
-	<div class="lib-card">
-		<div>
-			<h4 class="h4 bold">Тест</h4>
-		</div>
-		<div>
-			<h4 class="h4">
-				<span class="bold">
-					Верстальный челлендж:
-				</span>
-				<span class="normal">
-					создайте "Танцующего котика"
-				</span>
-			</h4>
-		</div>
-		<div class="arrow row">
-			<h5 class="h5">
-				<span class="normal">
-					Используйте HTML, CSS
-				</span>
-			</h5>
-			<svg class="custom-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M6.75 12H16.75M16.75 12L14 14.75M16.75 12L14 9.25" stroke="#795548" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-			</svg>
-		</div>
-	</div>
+<section id="tests-container" class="lib-cards">
+	
 </section>
 {% endblock %}
 {% block scripts %}
 <script src="../static/js/script.js"></script>
+<script src="{{ url_for('static', filename='js/getTests.js') }}" defer></script>
 {% endblock %}

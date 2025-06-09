@@ -235,7 +235,11 @@
 
 	.lib-card {
 		flex: 0 0 calc((100% - 60px) / 3);
-		max-width: 400px;
+		min-width: 500px;
+		max-width: 700px;
+		gap: 10px;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.lib-cards {

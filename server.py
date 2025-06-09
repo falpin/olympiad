@@ -50,8 +50,8 @@ def teach_reg():
 def teach_log():
     return render_template('tlogin.html')
 
-@app.route('/test')
-def test():
+@app.route('/test/<int:id>')
+def test(id):
     return render_template('test.html')
 
 @app.route('/profile-st')
