@@ -58,6 +58,7 @@ footer,
 	display: inline-flex;
 	transition: color 0.3s ease;
 	color: var(--brown);
+	font-size: 40px;
 }
 
 .add-container {
