@@ -13,8 +13,13 @@
 
 	<link rel="stylesheet" href="../static/css/styles.css">
 
+	<script src="{{ url_for('static', filename='js/updateUser.js') }}" defer></script>
+	<script src="{{ url_for('static', filename='js/notification.js') }}" defer></script>
+	<script src="{{ url_for('static', filename='js/loading.js') }}" defer></script>
+
 </head>
 <body>
+	<h2 id="custom-notification" class="notification h2"></h2>
 	<header>
 		<div class="header-top">
 			<a href="/" class="h5 logo bold"> 

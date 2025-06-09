@@ -7,14 +7,15 @@
 </div>
 <section class="form-container">
 	<div class="reg">
-		<form action="#">
+		<form id="loginForm">
 			<div class="reg-inputs">
-				<input class="h5" type="email" name="email" placeholder="Введите логин" required>
+				<input class="h5" type="text" name="login" placeholder="Введите логин" required>
 				<input class="h5" type="password" name="password" placeholder="Введите пароль" required>
 				<button type="submit" class="content-btn h5 bold">Отправить</button>
 			</div>
 		</form>
-		<a href="/tregister" class="p bold">Вы преподаватель?</a> 
+		<a href="/register" class="p bold">Регистрация</a>
+		<a href="/tregister" class="p bold">Вы преподаватель?</a>
 	</div>
 	<div class="danger">
 		<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
@@ -33,4 +34,5 @@
 {% endblock %}
 {% block scripts %}
 <script src="../static/js/script.js"></script>
+<script src="{{ url_for('static', filename='js/login.js') }}" defer></script>
 {% endblock %}

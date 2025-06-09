@@ -1,18 +1,13 @@
 {% extends "base.html" %}
 {% block title %}Профиль{% endblock %}
 {% block content %}
-
-{% endblock %}
-{% block scripts %}
-
-{% endblock %}
 <div class="student">
-	<img src="../static/img/image2.png" alt="прмиерная">
 	<div class="column">
-		<h3 class="h3 bold">Иванов Иван Иванович</h3>
-		<h4 class="h4 normal">example@gmail.com</h4>
-		<h4 class="h4 normal">+7 908 703 98 06</h4>
-		<h4 class="h4 bold">Школа 65</h4>
+		<h3 class="h3 bold username">Загрузка...</h3>
+		<h4 class="h4 normal email"></h4>
+		<h4 class="h4 normal phone"></h4>
+		<h4 class="h4 bold school"></h4>
+		<button onclick="logout()" class="content-btn bold">Выйти</button>
 	</div>
 </div>
 <div class="student-col">
@@ -23,16 +18,9 @@
 			<h4 class="h4 normal">Математика для умных 2024</h4>
 		</div>
 	</div>
-	<div>
-		<h2 class="h2 bold">Занятое место</h2>
-		<div class="column">
-			<h4 class="h4 normal gray">Вы еще не участвовали в олимпиаде :(</h4>
-			<h4 class="h4 normal">Математика для умных 2024</h4>
-			<h4 class="h4 normal">Математика для умных 2024</h4>
-		</div>
-	</div>
 </div>
 {% endblock %}
 {% block scripts %}
 <script src="../static/js/script.js"></script>
+<script src="{{ url_for('static', filename='js/logout.js') }}" defer></script>
 {% endblock %}
