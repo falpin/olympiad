@@ -1,130 +1,116 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Главная</title>
-	<link rel="stylesheet" href="../static/css/styles.css">
-</head>
-<body>
-	{% include 'header.html' %}
-	<section class="add-container bold">
-		<div class="column">
-			<h3 class="h3">
-				Представляем нашу новую платформу
-			    <span>ЧЭнК.Олимпиады</span>
-			</h3>
-			<h1 class="h1 bold">
-				"Здесь олимпиады становятся вызовом, а знания - ключом к успеху"
-			</h1>
-			<h3 class="h3">
-				Это не просто платформа, это ваш проводник в мир безграничных возможностей
-			</h3>
-			<button class="content-btn h5 bold">Войти</button>
+{% extends "base.html" %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+<section class="add-container bold">
+	<div class="column">
+		<h3 class="h3">
+			Представляем нашу новую платформу
+			<span>ЧЭнК.Олимпиады</span>
+		</h3>
+		<h1 class="h1 bold">
+			"Здесь олимпиады становятся вызовом, а знания - ключом к успеху"
+		</h1>
+		<h3 class="h3">
+			Это не просто платформа, это ваш проводник в мир безграничных возможностей
+		</h3>
+		<button class="content-btn h5 bold">Войти</button>
+	</div>
+</section>
+<section class="first-container">
+	<div>
+		<h2 class="h2 line">Олимпиады</h2>
+		<div class="add-olymp column">
+			<h4 class="h4 normal">Олимпиада по математике</h4>
+			<h4 id="order" class="h4 orange normal">Заявки на участие принимаются до 10 сентября</h4> 
+			<h5 class="h5 normal">
+				с <span>01.04.2025</span>
+				до <span>14.04.2025</span>
+			</h5>
 		</div>
-	</section>
-	<main>
-		<section class="first-container">
-			<div>
-				<h2 class="h2 line">Олимпиады</h2>
-				<div class="add-olymp column">
-					<h4 class="h4 normal">Олимпиада по математике</h4>
-					<h4 id="order" class="h4 orange normal">Заявки на участие принимаются до 10 сентября</h4> 
-					<h5 class="h5 normal">
-						с <span>01.04.2025</span>
-						до <span>14.04.2025</span>
-					</h5>
-				</div>
-				<div class="arrow row bold">
-					<a href="#" class="p">Перейти к олимпиадам</a>
-					<svg class="custom-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					  <path d="M6.75 12H16.75M16.75 12L14 14.75M16.75 12L14 9.25" stroke="#795548" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
-				</div>
-			</div>
-			<aside>
-			  <div class="calendar-container">
-			  	<h2 class="h2 line">Календарь</h2>
-			    <div class="calendar-header">
-			      <button class="icon-button prev" id="prev-month">
-			        <svg class="custom-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-			          xmlns="http://www.w3.org/2000/svg">
-			          <path d="M16.75 12H6.75M6.75 12L9.5 14.75M6.75 12L9.5 9.25" stroke="currentColor" stroke-width="1.5"
-			            stroke-linecap="round" stroke-linejoin="round" />
-			        </svg>
-			      </button>
-			      <h2 id="month-year" class="h5 normal"></h2>
-			      <button class="icon-button next" id="next-month">
-			        <svg class="custom-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-			          xmlns="http://www.w3.org/2000/svg">
-			          <path d="M6.75 12H16.75M16.75 12L14 14.75M16.75 12L14 9.25" stroke="currentColor" stroke-width="1.5"
-			            stroke-linecap="round" stroke-linejoin="round" />
-			        </svg>
-			      </button>
-			    </div>
-			    <div class="week-days bold">
-			      <div>Пн</div>
-			      <div>Вт</div>
-			      <div>Ср</div>
-			      <div>Чт</div>
-			      <div>Пт</div>
-			      <div>Сб</div>
-			      <div>Вс</div>
-			    </div>
-			    <div class="calendar-days" id="calendar-days"></div>
-			   <div class="events-list" id="events-list">
-			        <h3>События</h3>
-			        <ul id="event-details"></ul>
-			      </div>
-			  </div>
-			</aside>
-		</section>
-		<section class="school-container">
-			<div>
-				<h2 class="h2 line">Как к нам присоединиться</h2>
-				<h5 class="h5 normal">
-					Наша платформа помогает школам вовлекать учащихся в интелектуальных соревнования, развивать их навыки и находить таланты.
-				</h5>
-				<div>
-					<h4 class="h4 bold">Как это работает?</h4>
-					<h5 class="h5 normal">
-						Быстрая регистрация – подайте заявку на подключение школы;
-						Доступ к олимпиадам – участвуйте в конкурсах по разным предметам;
-						Мониторинг результатов – отслеживайте успехи учеников в личном кабинете;
-						Сертификаты и награды – получайте дипломы для участников и благодарности для педагогов;
-					</h5>
-				</div>
-				<div>
-					<h4 class="h4 bold">Премущества для школ</h4>
-					<h5 class="h5 normal">
-						Бесплатное участие в большинстве олимпиад;
-						Возможность организации собственных конкурсов;
-						Методическая поддержка для преподавателей;
-					</h5>
-				</div>
-				<button class="content-btn bold">Присоединиться</button>
-			</div>
-		</section>
-		<section>
-			<h2 class="h2 line">Будущие олимпиады</h2>
-			<div class="future-container">
-				<div class="subject column">
-					<h5 class="h5 bold">Математика</h5>
-					<h5 class="h5 normal">
-					    Дата проведения:
-					    <span>10 мая 2025</span>
-					</h5>
-					<p id="timing" class="h5 bold orange">Скоро</p>
-				</div>
-			</div>
-		</section>
-		</main>
-	<button id="backToTop" class="back-to-top" aria-label="Вернуться наверх">
-	  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-	    <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="#fff"/>
-	  </svg>
-	</button>
-	{% include 'footer.html' %}
-	<script src="../static/js/script.js"></script>
-</body>
-</html>
+		<div class="arrow row bold">
+			<a href="#" class="p">Перейти к олимпиадам</a>
+			<svg class="custom-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M6.75 12H16.75M16.75 12L14 14.75M16.75 12L14 9.25" stroke="#795548" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		</div>
+	</div>
+	<aside>
+		<div class="calendar-container">
+			<h2 class="h2 line">Календарь</h2>
+			<div class="calendar-header">
+				<button class="icon-button prev" id="prev-month">
+					<svg class="custom-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path d="M16.75 12H6.75M6.75 12L9.5 14.75M6.75 12L9.5 9.25" stroke="currentColor" stroke-width="1.5"
+					stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+			<h2 id="month-year" class="h5 normal"></h2>
+			<button class="icon-button next" id="next-month">
+				<svg class="custom-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path d="M6.75 12H16.75M16.75 12L14 14.75M16.75 12L14 9.25" stroke="currentColor" stroke-width="1.5"
+				stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+	</div>
+	<div class="week-days bold">
+		<div>Пн</div>
+		<div>Вт</div>
+		<div>Ср</div>
+		<div>Чт</div>
+		<div>Пт</div>
+		<div>Сб</div>
+		<div>Вс</div>
+	</div>
+	<div class="calendar-days" id="calendar-days"></div>
+	<div class="events-list" id="events-list">
+		<h3>События</h3>
+		<ul id="event-details"></ul>
+	</div>
+</div>
+</aside>
+</section>
+<section class="school-container">
+	<div>
+		<h2 class="h2 line">Как к нам присоединиться</h2>
+		<h5 class="h5 normal">
+			Наша платформа помогает школам вовлекать учащихся в интелектуальных соревнования, развивать их навыки и находить таланты.
+		</h5>
+		<div>
+			<h4 class="h4 bold">Как это работает?</h4>
+			<h5 class="h5 normal">
+				Быстрая регистрация – подайте заявку на подключение школы;
+				Доступ к олимпиадам – участвуйте в конкурсах по разным предметам;
+				Мониторинг результатов – отслеживайте успехи учеников в личном кабинете;
+				Сертификаты и награды – получайте дипломы для участников и благодарности для педагогов;
+			</h5>
+		</div>
+		<div>
+			<h4 class="h4 bold">Премущества для школ</h4>
+			<h5 class="h5 normal">
+				Бесплатное участие в большинстве олимпиад;
+				Возможность организации собственных конкурсов;
+				Методическая поддержка для преподавателей;
+			</h5>
+		</div>
+		<button class="content-btn bold">Присоединиться</button>
+	</div>
+</section>
+<section>
+	<h2 class="h2 line">Будущие олимпиады</h2>
+	<div class="future-container">
+		<div class="subject column">
+			<h5 class="h5 bold">Математика</h5>
+			<h5 class="h5 normal">
+				Дата проведения:
+				<span>10 мая 2025</span>
+			</h5>
+			<p id="timing" class="h5 bold orange">Скоро</p>
+		</div>
+	</div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/script.js"></script>
+{% endblock %}
