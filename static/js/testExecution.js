@@ -86,30 +86,49 @@ function createTest(test) {
                 // Обработчик клика для вариантов ответа
                 answerButton.addEventListener('click', () => {
                     if (question.type === 'single') {
-                        // Для одиночного выбора - снимаем выделение с других кнопок
+        // Проверяем, был ли уже выбран этот ответ
+                        const wasActive = answerButton.classList.contains('active');
+
+        // Снимаем выделение со всех кнопок
                         const allButtons = answersContainer.querySelectorAll('.test-btn');
                         allButtons.forEach(btn => btn.classList.remove('active'));
-                        answerButton.classList.add('active');
-                        
-                        // Сохраняем ответ
-                        answers[question.id] = {
-                            question_id: question.id,
-                            answer_ids: [answer.id]
-                        };
+
+        // Если ответ не был выбран ранее - выбираем его
+                        if (!wasActive) {
+                            answerButton.classList.add('active');
+                            answers[question.id] = {
+                                question_id: question.id,
+                                answer_ids: [answer.id]
+                            };
+                        } else {
+            // Если ответ был выбран - удаляем его из сохраненных ответов
+                            delete answers[question.id];
+                        }
                     } else {
-                        // Для множественного выбора - переключаем состояние
+        // Для множественного выбора - переключаем состояние
                         answerButton.classList.toggle('active');
-                        
-                        // Собираем все выбранные ответы
+
+        // Собираем все выбранные ответы
                         const selectedAnswers = answersContainer.querySelectorAll('.test-btn.active');
-                        answers[question.id] = {
-                            question_id: question.id,
-                            answer_ids: Array.from(selectedAnswers).map(btn => parseInt(btn.dataset.answerId))
-                        };
+                        if (selectedAnswers.length > 0) {
+                            answers[question.id] = {
+                                question_id: question.id,
+                                answer_ids: Array.from(selectedAnswers).map(btn => parseInt(btn.dataset.answerId))
+                            };
+                        } else {
+            // Если ни одного ответа не выбрано - удаляем вопрос из сохраненных ответов
+                            delete answers[question.id];
+                        }
                     }
-                    
-                    // Отправляем ответ на сервер
-                    sendAnswer(answers[question.id]);
+
+    // Отправляем ответ на сервер (если он есть)
+                    if (answers[question.id]) {
+                        sendAnswer(answers[question.id]);
+                    } else {
+        // Если ответ отменен, можно отправить запрос на удаление ответа (если ваш API поддерживает)
+        // или просто ничего не делать, в зависимости от требований
+                        console.log(`Ответ на вопрос ${question.id} отменен`);
+                    }
                 });
                 
                 answersContainer.appendChild(answerButton);
@@ -142,13 +161,13 @@ function createTest(test) {
         questionSection.appendChild(questionDiv);
         container.appendChild(questionSection);
     });
-    
+
     // Кнопка для проверки (вы можете добавить свою логику в handleSubmit)
-    const sendButton = document.createElement('button');
-    sendButton.className = 'content-btn h5 bold';
-    sendButton.innerHTML = `Проверить`;
-    sendButton.addEventListener('click', handleSubmit);
-    container.appendChild(sendButton);
+const sendButton = document.createElement('button');
+sendButton.className = 'content-btn h5 bold';
+sendButton.innerHTML = `Проверить`;
+sendButton.addEventListener('click', handleSubmit);
+container.appendChild(sendButton);
 }
 
 // Функция для отправки ответа на сервер
@@ -205,6 +224,7 @@ function handleSubmit() {
     .then(result => {
         showNotification(result);
         console.log(result);
+        window.location.href = "/profile-st";
     })
     .catch(error => {
         console.error('Ошибка:', error.message);

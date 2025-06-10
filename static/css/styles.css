@@ -14,6 +14,13 @@
 	font-family: "Fira Sans", sans-serif;
 }
 
+.test-btn.active {
+	background-color: #FFB952;
+	/* Дополнительные стили для выделенной кнопки, если нужно */
+	color: #000; /* Например, изменить цвет текста для лучшей читаемости */
+	border-color: #FFB952; /* Если у кнопки есть граница */
+}
+
 main {
 	min-height: 100vh;
 }
@@ -94,8 +101,8 @@ footer,
 }
 
 .content-btn:active {
-  transform: translateY(5px);
-  box-shadow: none;
+	transform: translateY(5px);
+	box-shadow: none;
 }
 
 .line {
@@ -212,31 +219,31 @@ footer,
 }
 
 .heart-section {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
 }
 
 .animated-path {
-  transition: all 0.4s ease;
-  flex-shrink: 0;
+	transition: all 0.4s ease;
+	flex-shrink: 0;
 }
 
 .animated-path:hover {
-  transform: scale(1.2);
-  transform-origin: center;
+	transform: scale(1.2);
+	transform-origin: center;
 }
 
 .filled-heart {
-  display: none;
+	display: none;
 }
 
 .add-text {
-  display: inline;
+	display: inline;
 }
 .saved-text {
-  display: none;
+	display: none;
 }
 
 .empty-fav {
@@ -246,9 +253,9 @@ footer,
 }
 
 .empty-fav > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .empty-fav > div > h2,
@@ -277,13 +284,13 @@ footer,
 }
 
 .fnew {
-    width: 100%;
-    margin: 0 auto;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .fnew img {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 
 .title > div > h2 {
@@ -291,9 +298,9 @@ footer,
 }
 
 .lib-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
 }
 
 .lib-card {
@@ -337,48 +344,48 @@ input {
 }
 
 .feedback-container {
-  margin: 10px 0;
+	margin: 10px 0;
 }
 
 .feedback-text {
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+	opacity: 0;
+	transition: opacity 0.3s ease;
 }
 
 .feedback-text.correct {
-  color: var(--green);
+	color: var(--green);
 }
 
 .feedback-text.incorrect {
-  color: var(--red);
+	color: var(--red);
 }
 
 .test-btn {
-  border: 1px solid var(--brown);
-  border-radius: 5px;
-  padding: 10px;
-  background: none;
-  cursor: pointer;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-  width: 100%;
-  margin: 5px 0;
+	border: 1px solid var(--brown);
+	border-radius: 5px;
+	padding: 10px;
+	background: none;
+	cursor: pointer;
+	transition: border-color 0.3s ease, background-color 0.3s ease;
+	width: 100%;
+	margin: 5px 0;
 }
 
 .test-btn:hover {
-  border-color: #4D3830;
+	border-color: #4D3830;
 }
 
 .test-btn.correct {
-  border-color: var(--green);
-  background-color: #e8f5e9;
+	border-color: var(--green);
+	background-color: #e8f5e9;
 }
 
 .test-btn.incorrect {
-  border-color: var(--red);
-  background-color: #ffebee;
+	border-color: var(--red);
+	background-color: #ffebee;
 }
 
 .timer {
@@ -405,16 +412,16 @@ input {
 }
 
 .img-answer {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .img-answer img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
 }
 
 .answer-btn > input {
@@ -434,31 +441,31 @@ input {
 }
 
 .back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 48px;
-  height: 48px;
-  background-color: #795548;
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 48px;
+	height: 48px;
+	background-color: #795548;
+	border: none;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	z-index: 1000;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
 }
 
 .back-to-top svg path {
-  fill: white;
+	fill: white;
 }
