@@ -4,6 +4,28 @@
 @import url('card.css');
 @import url('spacing.css');
 
+/*Удалить*/
+
+.add-container{
+	height: 100vh;
+	margin-bottom: 0;
+}
+
+.add-container>div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+}
+
+main{
+	margin-bottom: 0;
+}
+
+/**/
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -468,4 +490,41 @@ input {
 
 .back-to-top svg path {
 	fill: white;
+}
+
+
+.notification {
+	visibility: hidden;
+	min-width: 250px;
+	background-color: var(--yellow);
+	color: var(--text-color);
+	text-align: center;
+	border-radius: 4px;
+	padding: 12px;
+	position: fixed;
+	z-index: 9999;
+	left: 50%;
+	top: 30px;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: opacity 0.5s, visibility 0.5s;
+}
+
+.notification.show {
+	visibility: visible;
+	opacity: 1;
+}
+
+.spinner {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.spinner svg {
+	animation: rotate 1s linear infinite;
+	fill: currentColor;
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
 }

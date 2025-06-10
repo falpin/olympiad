@@ -21,9 +21,9 @@ function updateUserData() {
     })
     .then(response => {
         if (!response.ok) {
-        return response.text().then(errorText => {
-            console.log("Error text:", errorText);
-            throw new Error(errorText); });
+            return response.text().then(errorText => {
+                console.log("Error text:", errorText);
+                throw new Error(errorText); });
         }
         return response.json();
     })
@@ -40,6 +40,18 @@ function updateUserData() {
         fillElements('email', user.email || '');
         fillElements('phone', user.phone || '');
         fillElements('school', user.school || '');
+
+
+        const adminElements = document.querySelectorAll(".admin");
+        if (user.role === "admin") {
+            adminElements.forEach(el => {
+                el.style.display = 'flex';
+            });
+        } else {
+            adminElements.forEach(el => {
+                el.style.display = 'none';
+            });
+        }
     })
     .catch(error => {
         console.error('Ошибка:', error);
