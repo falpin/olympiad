@@ -52,7 +52,9 @@ footer,
 .icon-link:hover,
 .mobile-menu a:hover,
 .first-block > div > div > h5 > span,
-.first-block a:hover {
+.first-block a:hover,
+.menu > div > div a:hover,
+.menu-olympiads a:hover {
 	color: var(--orange);
 }
 
@@ -468,4 +470,169 @@ input {
 
 .back-to-top svg path {
 	fill: white;
+}
+
+
+
+
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: max-content;
+}
+
+.menu-btn {
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 10px 60px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.menu > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu-icon {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
+
+.menu-icon::before {
+    content: " ";
+    width: 30px;
+    height: 30px;
+}
+
+.menu > div > div {
+    padding: 20px 20px;
+    background-color: #FEFAF7;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.menu-olympiads {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.menu-blocks {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 100px;
+}
+
+.menu-olympiads,
+.menu-create {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.menu-olympiads > h2,
+.menu-create > h2,
+.menu-create > div > h4,
+.menu-dop {
+	margin-bottom: 40px;
+}
+
+.create {
+	display: flex;
+	gap: 40px;
+	margin-bottom: 40px;
+}
+
+.create > div {
+	display: flex;
+	gap: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+	margin-bottom: 10px;
+}
+
+.task-form {
+  background-color: #f9f5f6;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  border: 1px solid #AAA09D;
+  border-radius: 5px;
+  background: rgb(255, 245, 238);
+  padding: 10px;
+  transition: border-color 0.3s ease;
+  outline: none;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 50px;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.add-button,
+.delete-button {
+  padding: 10px 20px;
+  background-color: #f0e6dd;
+  border: 1px solid #AAA09D;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover,
+.delete-button:hover {
+  background-color: #e6d8c7;
 }
