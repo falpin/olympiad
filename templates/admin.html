@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Панель администратора</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
+	<link rel="stylesheet" href="../static/css/styles.css">
+
+	<script src="{{ url_for('static', filename='js/updateUser.js') }}" defer></script>
+	<script src="{{ url_for('static', filename='js/notification.js') }}" defer></script>
+	<script src="{{ url_for('static', filename='js/loading.js') }}" defer></script>
+</head>
+<body>
+	<header>
+		<div class="header-top">
+			<a href="/" class="h5 logo bold"> 
+				ЧЭнК.Олимпиады
+				<span class="p">От колледжа ЧЭнК</span>
+			</a>
+		</div>
+		<div class="admin">
+			<div class="column">
+				<h5 class="h5 bold">Преподаватель</h6>
+				<h6 class="h6 normal">Роль</p>
+			</div>
+			<button class="content-btn bold" onclick="logout()">Выход</button>
+		</div>
+	</header>
+	<main>
+		<section class="menu-blocks">
+			<aside class="first-block">
+				<div class="menu">
+					<div class="olympiads">
+						<button class="menu-btn bold h5">Олимпиады</button>
+						<div>
+							<a href="#" class="h6 iconoir-book-solid menu-icon">Список олимпиад</a>
+							<a href="#" class="h6 iconoir-plus-circle-solid menu-icon">Добавить</a>
+							<a href="#" class="h6 iconoir-page-edit menu-icon">Изменить</a>
+							<a href="#" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
+						</div>
+					</div>
+					<div class="tests">
+						<button class="menu-btn bold h5">Тесты</button>
+						<div>
+							<a href="#" class="h6 iconoir-book-solid menu-icon">Список тестов</a>
+							<a href="#" class="h6 iconoir-plus-circle-solid menu-icon">Добавить</a>
+							<a href="#" class="h6 iconoir-page-edit menu-icon">Изменить</a>
+							<a href="#" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
+						</div>
+					</div>
+					<div class="members">
+						<button class="menu-btn bold h5">Участники</button>
+						<div>
+							<a href="#" class="h6 iconoir-user-circle menu-icon">Список участников</a>
+							<a href="#" class="h6 iconoir-plus-circle-solid menu-icon">Добавить</a>
+							<a href="#" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
+						</div>
+					</div>
+					<div class="teachers">
+						<button class="menu-btn bold h5">Преподаватели</button>
+						<div>
+							<a href="#" class="h6 iconoir-profile-circle menu-icon">Все преподаватели</a>
+							<a href="#" class="h6 iconoir-plus-circle-solid menu-icon">Добавить</a>
+							<a href="#" class="h6 iconoir-page-edit menu-icon">Изменить</a>
+							<a href="#" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
+						</div>
+					</div>
+					<div class="news">
+						<button class="menu-btn bold h5">Новости</button>
+						<div>
+							<a href="#" class="h6 iconoir-post-solid menu-icon">Все новости</a>
+							<a href="#" class="h6 iconoir-plus-circle-solid menu-icon">Добавить</a>
+							<a href="#" class="h6 iconoir-page-edit menu-icon">Изменить</a>
+							<a href="#" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
+						</div>
+					</div>
+			</aside>
+			<section class="second-block">
+<!-- 				<div class="menu-olympiads">
+					<h2 class="h2 bold">Список олимпиад</h2>
+					<div>
+						<a href="#" class="h5 normal">Ссылка</a>
+					</div>
+				</div> -->
+<!-- 				<div class="menu-create">
+					<h2 class="h2 bold">Создать олимпиаду</h2>
+					<div class="create row">
+					    <div class="column">
+					        <div class="input-group">
+					            <label for="name" class="h6">Название олимпиады</label>
+					            <input type="text" id="name" placeholder="Например: «Олимпиада школьников по математике»">
+					        </div>
+					        <div class="input-group">
+					            <label for="subject" class="h6">Предмет или специальность</label>
+					            <input type="text" id="subject" placeholder="Например: Математика">
+					        </div>
+					        <div class="input-group">
+					            <label for="deadline" class="h6">Сроки отправки заявок</label>
+					            <input type="text" id="deadline" placeholder="Например: до 15 декабря 2025 года">
+					        </div>
+					        <div class="input-group">
+					            <label for="short-desc" class="h6">Краткое описание олимпиады</label>
+					            <input type="text" id="short-desc" placeholder="Например: Всероссийская олимпиада для старшеклассников">
+					        </div>
+					        <div class="input-group">
+					            <label for="full-desc" class="h6">Полное описание олимпиады</label>
+					            <input type="text" id="full-desc" placeholder="Например: Олимпиада проводится ежегодно...">
+					        </div>
+					        <div class="input-group">
+					            <label for="dates" class="h6">Сроки проведения олимпиады</label>
+					            <input type="text" id="dates" placeholder="Например: январь–февраль 2025">
+					        </div>
+					        <div class="input-group">
+					            <label for="schedule" class="h6">Расписание туров</label>
+					            <input type="text" id="schedule" placeholder="Например: Отборочный тур — 10 января, финал — 10 февраля">
+					        </div>
+					    </div>
+					    <div class="column">
+					        <div class="input-group">
+					            <label for="docs" class="h6">Список документов</label>
+					            <input type="text" id="docs" placeholder="Например: Заявка, скан паспорта, фото">
+					        </div>
+					        <div class="input-group">
+					            <label for="organizers" class="h6">Организаторы олимпиады</label>
+					            <input type="text" id="organizers" placeholder="Например: Министерство образования РФ">
+					        </div>
+					        <div class="input-group">
+					            <label for="contacts" class="h6">Контакты организаторов</label>
+					            <input type="text" id="contacts" placeholder="Например: olympiad@edu.ru | +7 (495) 123-45-67">
+					        </div>
+					        <div class="input-group">
+					            <label for="features" class="h6">Особенности олимпиады</label>
+					            <input type="text" id="features" placeholder="Например: Онлайн-формат, индивидуальное участие">
+					        </div>
+					        <div class="input-group">
+					            <label for="how-to" class="h6">Как участвовать в олимпиаде</label>
+					            <input type="text" id="how-to" placeholder="Например: Подать заявку на сайте до дедлайна">
+					        </div>
+					        <div class="input-group">
+					            <label for="topics" class="h6">Какие темы повторить для прохождения олимпиады</label>
+					            <input type="text" id="topics" placeholder="Например: Алгебра, геометрия, теория вероятностей">
+					        </div>
+					    </div>
+					</div>
+					<div class="menu-dop">
+						<h4 class="h4 bold">Заполнение дополнительной информации</h4>
+						<div class="column">
+							<div class="input-group">
+							  <label for="tasks">Добавить количество заданий</label>
+							  <input type="text" id="tasks" placeholder="Например: 10 заданий">
+							</div>
+
+							<div class="input-group">
+							  <label for="points">Добавить количество баллов</label>
+							  <input type="text" id="points" placeholder="Например: 100 баллов">
+							</div>
+
+							<div class="input-group">
+							  <label for="time">Добавить время на проведение олимпиады</label>
+							  <input type="text" id="time" placeholder="Например: 3 часа">
+							</div>
+						</div>
+					</div>
+
+					<div class="task-form">
+					  <div class="row">
+					    <div class="column">
+					      <div class="input-group">
+					        <label for="task-number" class="h6">Номер задания</label>
+					        <input type="text" id="task-number" placeholder="Введите номер задания">
+					      </div>
+					      <div class="input-group">
+					        <label for="task-text" class="h6">Текст задания</label>
+					        <textarea id="task-text" placeholder="Введите текст задания"></textarea>
+					      </div>
+					    </div>
+					    <div class="column">
+					      <div class="input-group">
+					        <label for="answer-options" class="h6">Варианты ответов</label>
+					        <select id="answer-options">
+					          <option value="one">Один правильный</option>
+					          <option value="multiple">Много правильных</option>
+					        </select>
+					      </div>
+					      <div class="input-group">
+					        <label for="points" class="h6">Количество баллов</label>
+					        <input type="number" id="points" placeholder="Введите количество баллов">
+					      </div>
+					    </div>
+					  </div>
+					  <div class="input-group">
+					    <label for="answer" class="h6">Ответ / Не указывать</label>
+					    <textarea id="answer" placeholder="Введите ответ"></textarea>
+					  </div>
+					  <div class="controls">
+					    <button class="add-button" class="h6">Добавить</button>
+					    <button class="delete-button" class="h6">Удалить</button>
+					  </div>
+					</div>
+					<button class="content-btn">Сохранить</button>
+				</div> -->
+			</section>
+		</section>
+	</main>
+</body>
+</html>
