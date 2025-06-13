@@ -381,4 +381,11 @@
 		object-fit: cover;
 	}
 
+	.admin {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 40px;
+	}
+
 }
