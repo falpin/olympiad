@@ -34,16 +34,16 @@
 					<div class="olympiads">
 						<button class="menu-btn bold h5">Олимпиады</button>
 						<div>
-							<a href="#" class="h6 iconoir-book-solid menu-icon">Список олимпиад</a>
-							<a href="#" class="h6 iconoir-plus-circle-solid menu-icon">Добавить</a>
-							<a href="#" class="h6 iconoir-page-edit menu-icon">Изменить</a>
-							<a href="#" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
+							<a href="#olympiads" class="h6 iconoir-book-solid menu-icon">Список олимпиад</a>
+							<a href="#create" class="h6 iconoir-plus-circle-solid menu-icon">Добавить</a>
+							<a href="#edit" class="h6 iconoir-page-edit menu-icon">Изменить</a>
+							<a href="#delete" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
 						</div>
 					</div>
 					<div class="tests">
 						<button class="menu-btn bold h5">Тесты</button>
 						<div>
-							<a href="#" class="h6 iconoir-book-solid menu-icon">Список тестов</a>
+							<a href="#test" class="h6 iconoir-book-solid menu-icon">Список тестов</a>
 							<a href="#" class="h6 iconoir-plus-circle-solid menu-icon">Добавить</a>
 							<a href="#" class="h6 iconoir-page-edit menu-icon">Изменить</a>
 							<a href="#" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
@@ -52,8 +52,8 @@
 					<div class="members">
 						<button class="menu-btn bold h5">Участники</button>
 						<div>
-							<a href="#" class="h6 iconoir-user-circle menu-icon">Список участников</a>
-							<a href="#" class="h6 iconoir-check-circle-solid menu-icon">Подтвердить</a>
+							<a href="#student" class="h6 iconoir-user-circle menu-icon">Список участников</a>
+							<a href="#part" class="h6 iconoir-check-circle-solid menu-icon">Подтвердить</a>
 							<a href="#" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
 						</div>
 					</div>
@@ -77,13 +77,14 @@
 					</div>
 			</aside>
 			<section class="second-block">
-<!-- 				<div class="menu-olympiads">
+ 				<div class="menu-olympiads" id="olympiads" style="display: none;">
 					<h2 class="h2 bold">Список олимпиад</h2>
 					<div>
 						<a href="#" class="h5 normal">Ссылка</a>
 					</div>
-				</div> -->
-<!-- 				<div class="menu-create">
+				</div>
+
+ 				<div class="menu-create" id="create" style="display: none;">
 					<h2 class="h2 bold">Создать олимпиаду</h2>
 					<div>
 						<div class="create row">
@@ -192,13 +193,15 @@
 						</div>	
 					</div>
 					<button class="content-btn bold">Сохранить</button>
-				</div> -->
-<!-- 				<div class="menu-create">
+				</div>
+
+ 				<div class="menu-create" id="edit" style="display: none;">
 					<h2 class="h2 bold">Изменить олимпиаду</h2>
-					сюда див без класса
+					<!-- сюда див без класса -->
 					<button class="content-btn bold">Сохранить изменения</button>
-				</div> -->
-<!-- 				<div class="menu-del">
+				</div>
+
+ 				<div class="menu-del" id="delete" style="display: none;">
 					<h2 class="h2 bold">Удалить олимпиаду</h2>
 					<div>
 						<div class="delete">
@@ -206,8 +209,9 @@
 							<h6 class="bold h6">Удалить</h6>
 						</div>
 					</div>
-				</div> -->
-				<div class="menu-test">
+				</div>
+
+ 				<div class="menu-test" id="test" style="display: none;">
 					<h2 class="h2 bold">Создать тест</h2>
 					<form id="test-form">
 						<div class="form-group">
@@ -254,9 +258,35 @@
 						<button type="submit" class="content-btn bold">Сохранить тест</button>
 					</form>
 				</div>
+
+ 				<div class="menu-st" id="student" style="display: none;">
+					<h2 class="h2 bold">Список участников</h2>
+					<div>
+						<a href="#" class="h5 normal">ФИО</a>
+					</div>
+				</div>
+
+				<div class="menu-st" id="part" style="display: none;">
+					<h2 class="h2 bold">Подтверждение участника</h2>
+					<form class="participant-form">
+
+						<div class="participant-row">
+							<input type="text" placeholder="Фамилия Имя Отчество" class="fullname" />
+					      	<input type="tel" placeholder="Номер телефона" class="phone" />
+					      	<button type="button" class="generate-btn">Сгенерировать</button>
+					    </div>
+
+					    <div class="credentials" style="display: none;">
+					      	<span><strong>Логин:</strong> <span class="login-result"></span></span>
+					     	<span><strong>Пароль:</strong> <span class="password-result"></span></span>
+					    </div>
+					</form>
+				</div>
 			</section>
 		</section>
 	</main>
 	<script src="../static/js/addVar.js"></script>
+	<script src="../static/js/password.js"></script>
+	<script src="../static/js/blocks.js"></script>
 </body>
 </html>
