@@ -58,5 +58,13 @@ def test(id):
 def student():
     return render_template('profile-st.html')
 
+@app.route('/tprofile')
+def teacher():
+    return render_template('tprofile.html')
+
+@app.route('/admin')
+def admin():
+    return render_template('admin.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
