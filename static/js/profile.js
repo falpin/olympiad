@@ -63,4 +63,14 @@ function tests_results() {
     });
 }
 
+function check_admin() {
+    const userData = localStorage.getItem('user');
+    const user = JSON.parse(userData);
+
+    if (user.role !== 'student') {
+        window.location.href = "/admin";
+    }
+}
+
+check_admin()
 tests_results()

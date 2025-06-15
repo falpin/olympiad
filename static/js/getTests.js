@@ -11,14 +11,12 @@ function getTests() {
     .then(response => {
         if (!response.ok) {
             return response.text().then(errorText => {
-                console.log("Error text:", errorText);
                 throw new Error(errorText);
             });
         }
         return response.json();
     })
     .then(result => {
-        console.log(result);
         createTestCards(result);
     })
     .catch(error => {

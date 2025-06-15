@@ -40,6 +40,7 @@ function updateUserData() {
         fillElements('email', user.email || '');
         fillElements('phone', user.phone || '');
         fillElements('school', user.school || '');
+        fillElements('role', user.role || '');
     })
     .catch(error => {
         console.error('Ошибка:', error);

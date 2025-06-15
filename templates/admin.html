@@ -10,6 +10,7 @@
 	<script src="{{ url_for('static', filename='js/updateUser.js') }}" defer></script>
 	<script src="{{ url_for('static', filename='js/notification.js') }}" defer></script>
 	<script src="{{ url_for('static', filename='js/loading.js') }}" defer></script>
+	<script src="{{ url_for('static', filename='js/getUsers.js') }}" defer></script>
 </head>
 <body>
 	<header>
@@ -21,8 +22,8 @@
 		</div>
 		<div class="admin">
 			<div class="column">
-				<h6 class="h6 bold">Преподаватель</h6>
-				<p class="p normal">Роль</p>
+				<h6 class="h6 bold username"></h6>
+				<p class="p normal role"></p>
 			</div>
 			<button class="bold admin-btn h6" onclick="logout()">Выход</button>
 		</div>
@@ -54,16 +55,13 @@
 						<div>
 							<a href="#student" class="h6 iconoir-user-circle menu-icon">Список участников</a>
 							<a href="#part" class="h6 iconoir-check-circle-solid menu-icon">Подтвердить</a>
-							<a href="#" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
 						</div>
 					</div>
 					<div class="teachers">
 						<button class="menu-btn bold h5">Преподаватели</button>
 						<div>
-							<a href="#" class="h6 iconoir-profile-circle menu-icon">Все преподаватели</a>
-							<a href="#" class="h6 iconoir-check-circle-solid menu-icon">Подтвердить</a>
-							<a href="#" class="h6 iconoir-page-edit menu-icon">Изменить</a>
-							<a href="#" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
+							<a href="#teachers" class="h6 iconoir-profile-circle menu-icon">Все преподаватели</a>
+							<a href="#activate_teachers" class="h6 iconoir-check-circle-solid menu-icon">Назначить</a>
 						</div>
 					</div>
 					<div class="news">
@@ -259,29 +257,36 @@
 					</form>
 				</div>
 
- 				<div class="menu-st" id="student" style="display: none;">
+				<div class="menu-st" id="student" style="display: none;">
 					<h2 class="h2 bold">Список участников</h2>
-					<div>
-						<a href="#" class="h5 normal">ФИО</a>
+					<div style="margin-bottom: 20px;">
+						<input type="text" id="user-search" placeholder="Поиск по ФИО...">
 					</div>
+					
 				</div>
 
 				<div class="menu-st" id="part" style="display: none;">
 					<h2 class="h2 bold">Подтверждение участника</h2>
-					<form class="participant-form">
-
-						<div class="participant-row">
-							<input type="text" placeholder="Фамилия Имя Отчество" class="fullname" />
-					      	<input type="tel" placeholder="Номер телефона" class="phone" />
-					      	<button type="button" class="generate-btn">Сгенерировать</button>
-					    </div>
-
-					    <div class="credentials" style="display: none;">
-					      	<span><strong>Логин:</strong> <span class="login-result"></span></span>
-					     	<span><strong>Пароль:</strong> <span class="password-result"></span></span>
-					    </div>
-					</form>
+					<div style="margin-bottom: 20px;">
+						<input type="text" id="user-search" placeholder="Поиск по ФИО...">
+					</div>
+					<div id="users-container"></div>
 				</div>
+
+				<div class="menu-st" id="teachers" style="display: none;">
+					<h2 class="h2 bold">Список преподавателей</h2>
+					<div style="margin-bottom: 20px;">
+						<input type="text" id="user-search" placeholder="Поиск по ФИО...">
+					</div>
+				</div>
+
+				<div class="menu-st" id="activate_teachers" style="display: none;">
+					<h2 class="h2 bold">Назначение преподавателем</h2>
+					<div style="margin-bottom: 20px;">
+						<input type="text" id="user-search" placeholder="Поиск по ФИО...">
+					</div>
+				</div>
+
 			</section>
 		</section>
 	</main>
