@@ -106,8 +106,8 @@ function createAdminCards(tests){
                 <h4 class="h4 normal">${test.description}</h4>
             </div>
             <div class="row">
-            <button class="generate-btn approve-btn"><h4>Заблокировать тест</h4></button>
             <a class="generate-btn approve-btn"><h4>Изменить</h4></a>
+            <button class="generate-btn approve-btn"><h4>Удалить</h4></button>
             </div>
             
         `;
