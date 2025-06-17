@@ -191,7 +191,7 @@ function createTest(test, result_id) {
 const sendButton = document.createElement('button');
 sendButton.className = 'content-btn h5 bold';
 sendButton.innerHTML = `Завершить`;
-sendButton.addEventListener('click', handleSubmit);
+sendButton.addEventListener('click', () => handleSubmit(result_id));
 container.appendChild(sendButton);
 }
 
@@ -226,10 +226,10 @@ function sendAnswer(answerData) {
 }
 
 // Функция для обработки нажатия на кнопку "Проверить"
-function handleSubmit() {
+function handleSubmit(result_id) {
     const host = "https://olympiad-api.falpin.ru";
     
-    fetch(`${host}/olympiads/${test_id}/finish`, {
+    fetch(`${host}/olympiads/${result_id}/finish`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
