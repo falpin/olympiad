@@ -26,8 +26,8 @@ def favorites():
 def login():
     return render_template('login.html')
 
-@app.route('/olympiada')
-def olympiada():
+@app.route('/olympiada/<int:id>')
+def olympiada(id):
 	return render_template('olympiada.html')
 
 @app.route('/online-olympiad')

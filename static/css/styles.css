@@ -21,6 +21,12 @@
 	border-color: #FFB952; /* Если у кнопки есть граница */
 }
 
+#olympiads-container{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
 main {
 	min-height: 100vh;
 }
