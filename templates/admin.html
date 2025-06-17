@@ -12,7 +12,10 @@
 	<script src="{{ url_for('static', filename='js/loading.js') }}" defer></script>
 	<script src="{{ url_for('static', filename='js/getUsers.js') }}" defer></script>
 	<script src="{{ url_for('static', filename='js/getTests.js') }}" defer></script>
+	<script src="{{ url_for('static', filename='js/getOlymp.js') }}" defer></script>
 	<script src="{{ url_for('static', filename='js/create_test_and_answer.js') }}" defer></script>
+	<script src="{{ url_for('static', filename='js/create_olymp.js') }}" defer></script>
+	<script src="{{ url_for('static', filename='js/logout.js') }}" defer></script>
 </head>
 <body>
 	<header>
@@ -38,9 +41,7 @@
 						<button class="menu-btn bold h5">Олимпиады</button>
 						<div>
 							<a href="#olympiads" class="h6 iconoir-book-solid menu-icon">Список олимпиад</a>
-							<a href="#create" class="h6 iconoir-plus-circle-solid menu-icon">Добавить</a>
-							<a href="#edit" class="h6 iconoir-page-edit menu-icon">Изменить</a>
-							<a href="#delete" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
+							<a href="#create_olymp" class="h6 iconoir-plus-circle-solid menu-icon">Добавить</a>
 						</div>
 					</div>
 					<div class="tests">
@@ -77,120 +78,46 @@
 			<section class="second-block">
  				<div class="menu-olympiads" id="olympiads" style="display: none;">
 					<h2 class="h2 bold">Список олимпиад</h2>
-					<div>
-						<a href="#" class="h5 normal">Ссылка</a>
-					</div>
+					<div id="admin-olymps-container"></div>
 				</div>
 
- 				<div class="menu-create" id="create" style="display: none;">
+ 				<div class="menu-test" id="create_olymp" style="display: none;">
 					<h2 class="h2 bold">Создать олимпиаду</h2>
-					<div>
-						<div class="create row">
-						    <div class="menu-column">
-						        <div class="input-group">
-						            <label for="name" class="h6">Название олимпиады</label>
-						            <input type="text" id="name" placeholder="Например: «Олимпиада по математике»" required>
-						        </div>
-						        <div class="input-group">
-						            <label for="subject" class="h6">Предмет или специальность</label>
-						            <input type="text" id="subject" placeholder="Например: Математика" required>
-						        </div>
-						        <div class="input-group">
-						            <label for="deadline" class="h6">Сроки отправки заявок</label>
-						            <input type="text" id="deadline" placeholder="Например: до 15 декабря 2025 года">
-						        </div>
-						        <div class="input-group">
-						            <label for="short-desc" class="h6">Описание олимпиады</label>
-						            <input type="text" id="short-desc" placeholder="Например: Всероссийская олимпиада для старшеклассников" required>
-						        </div>
-						        <div class="input-group">
-						            <label for="dates" class="h6">Сроки проведения олимпиады</label>
-						            <input type="text" id="dates" placeholder="Например: январь–февраль 2025" required>
-						        </div>
-						        <div class="input-group">
-						            <label for="schedule" class="h6">Расписание туров</label>
-						            <input type="text" id="schedule" placeholder="Например: Отборочный тур — 10 января, финал — 10 февраля" required>
-						        </div>
-						    </div>
-						    <div class="menu-column">
-						        <div class="input-group">
-						            <label for="docs" class="h6">Список документов</label>
-						            <input type="text" id="docs" placeholder="Например: Заявка на проведение олимпиады">
-						        </div>
-						        <div class="input-group">
-						            <label for="organizers" class="h6">Организаторы олимпиады</label>
-						            <input type="text" id="organizers" placeholder="Например: Колледж ЧЭнк">
-						        </div>
-						        <div class="input-group">
-						            <label for="contacts" class="h6">Контакты организаторов</label>
-						            <input type="text" id="contacts" placeholder="Например: olympiad@edu.ru">
-						        </div>
-						        <div class="input-group">
-						            <label for="features" class="h6">Особенности олимпиады</label>
-						            <input type="text" id="features" placeholder="Например: Индивидуальное участие">
-						        </div>
-						        <div class="input-group">
-						            <label for="topics" class="h6">Какие темы повторить для прохождения олимпиады</label>
-						            <input type="text" id="topics" placeholder="Например: Алгебра, геометрия, теория вероятностей">
-						        </div>
-						    </div>
+					<form id="olymp-form">
+						<div class="form-group">
+							<label for="olymp-name" class="h6">Название олимпиады</label>
+							<input type="text" id="olymp-name" placeholder="Введите название олимпиады">
 						</div>
-						<div class="menu-dop">
-							<h4 class="h4 bold">Заполнение дополнительной информации</h4>
-							<div class="menu-column">
-								<div class="input-group">
-								  <label for="tasks" class="h6">Добавить количество заданий</label>
-								  <input type="text" id="tasks" placeholder="Например: 10 заданий" required>
-								</div>
-
-								<div class="input-group">
-								  <label for="points" class="h6">Добавить количество баллов</label>
-								  <input type="text" id="points" placeholder="Например: 100 баллов" required>
-								</div>
-
-								<div class="input-group">
-								  <label for="time" class="h6">Добавить время на проведение олимпиады</label>
-								  <input type="text" id="time" placeholder="Например: 3 часа" required>
-								</div>
-							</div>
+						<div class="form-group">
+							<label for="olymp-description" class="h6">Описание олимпиады</label>
+							<textarea id="olymp-description" placeholder="Введите описание олимпиады"></textarea>
 						</div>
-						<div class="task-form">
+						<div class="form-group">
+							<label for="duration">Длительность (минуты):</label>
+							<input type="number" id="olymp-duration" name="duration" value="180">
+							
+							<label for="start_time">Дата и время начала:</label>
+							<input type="datetime-local" id="olymp-start_time" name="start_time">
+							
+							<label for="end_time">Дата и время окончания:</label>
+							<input type="datetime-local" id="olymp-end_time" name="end_time">
+						</div>
+						<div class="form-group">
+							<label for="question-count" class="h6">Система оценивания</label>
+							<label for="question-count" class="h6">Сколько процентов нужно получить для нужной оценки</label>
 							<div class="row">
-								<div class="menu-column">
-									<div class="input-group">
-										<label for="task-number" class="h6">Номер задания</label>
-										<input type="text" id="task-number" placeholder="Введите номер задания">
-									</div>
-									<div class="input-group">
-										<label for="task-text" class="h6">Текст задания</label>
-										<textarea id="task-text" placeholder="Введите текст задания"></textarea>
-									</div>
-								</div>
-								<div class="menu-column">
-									<div class="input-group">
-										<label for="answer-options" class="h6">Варианты ответов</label>
-										<select id="answer-options">
-											<option value="one">Один правильный</option>
-											<option value="multiple">Много правильных</option>
-										</select>
-									</div>
-									<div class="input-group">
-										<label for="points" class="h6">Количество баллов</label>
-										<input type="number" id="points" placeholder="Введите количество баллов">
-									</div>
-								</div>
+								<input type="number" data-olymp-grade="5" placeholder="Оценка: 5" min="0" max="100" value="90" required>
+								<input type="number" data-olymp-grade="4" placeholder="Оценка: 4" min="0" max="100" value="80" required>
+								<input type="number" data-olymp-grade="3" placeholder="Оценка: 3" min="0" max="100" value="60" required>
+								<input type="number" data-olymp-grade="2" placeholder="Оценка: 2" min="0" max="100" value="50" required>
 							</div>
-							<div class="input-group">
-								<label for="answer" class="h6">Ответ / Не указывать</label>
-								<textarea id="answer" placeholder="Введите ответ"></textarea>
-							</div>
-							<div class="controls">
-								<button class="add-button" class="h6">Добавить</button>
-								<button class="delete-button" class="h6">Удалить</button>
-							</div>
-						</div>	
-					</div>
-					<button class="content-btn bold">Сохранить</button>
+						</div>
+
+						<h2 class="h5">Добавить вопросы</h2>
+						<div id="questions-container"></div>
+						<button type="button" class="add-question">Добавить вопрос</button>
+						<button type="submit" class="content-btn bold">Сохранить тест</button>
+					</form>
 				</div>
 
  				<div class="menu-create" id="edit" style="display: none;">
@@ -275,7 +202,6 @@
 			</section>
 		</section>
 	</main>
-	<!-- <script src="../static/js/addVar.js"></script> -->
 	<script src="../static/js/password.js"></script>
 	<script src="../static/js/blocks.js"></script>
 </body>

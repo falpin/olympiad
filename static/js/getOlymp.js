@@ -1,6 +1,6 @@
-const jwtToken = getCookie('jwt_token');
-
 function getOlymp() {
+    const result = null
+    const jwtToken = getCookie('jwt_token');
     const host = "https://olympiad-api.falpin.ru" 
     fetch(`${host}/olympiads`, {
         method: 'GET',
@@ -18,8 +18,8 @@ function getOlymp() {
         return response.json();
     })
     .then(result => {
-        if (document.getElementById("olympiads-container")) {createTestCards(result);}
-        if (document.getElementById("admin-tests-container")) {createAdminCards(result);}
+        if (document.getElementById("olympiads-container")) {createOlympCards(result);}
+        if (document.getElementById("admin-olymps-container")) {createAdminOlympCards(result);}
     })
     .catch(error => {
         console.error('Ошибка:', error);
@@ -27,6 +27,7 @@ function getOlymp() {
 }
 
 function startTest(olympiadId) {
+    const jwtToken = getCookie('jwt_token');
     const host = "https://olympiad-api.falpin.ru";
     return fetch(`${host}/tests/${olympiadId}/start`, {
         method: 'POST',
@@ -46,7 +47,7 @@ function startTest(olympiadId) {
     });
 }
 
-function createTestCards(olympiads) {
+function createOlympCards(olympiads) {
     const container = document.getElementById('olympiads-container');
     
     olympiads.forEach(olympiad => {
@@ -76,7 +77,7 @@ function createTestCards(olympiads) {
             </h4>
             <a class="h5 test-link" href="#" data-test-id="${olympiad.id}">Выполнить олимпиаду</a>
         `;
-        
+        console.log('Вставляем')
         container.appendChild(card);
     });
 
@@ -101,8 +102,8 @@ function createTestCards(olympiads) {
     });
 }
 
-function createAdminCards(tests){
-    const container = document.getElementById('admin-tests-container');
+function createAdminOlympCards(tests){
+    const container = document.getElementById('admin-olymps-container');
     
     tests.forEach(test => {
         const card = document.createElement('div');
