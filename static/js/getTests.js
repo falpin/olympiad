@@ -17,7 +17,8 @@ function getTests() {
         return response.json();
     })
     .then(result => {
-        createTestCards(result);
+        if (document.getElementById("tests-container")) {createTestCards(result);}
+        if (document.getElementById("admin-tests-container")) {createAdminCards(result);}
     })
     .catch(error => {
         console.error('Ошибка:', error);
@@ -69,6 +70,7 @@ function createTestCards(tests) {
         container.appendChild(card);
     });
 
+
     // Добавляем обработчики событий для всех ссылок на тесты
     document.querySelectorAll('.test-link').forEach(link => {
         link.addEventListener('click', function(e) {
@@ -86,6 +88,31 @@ function createTestCards(tests) {
                     alert('Не удалось начать тест. Пожалуйста, попробуйте позже.');
                 });
         });
+    });
+}
+
+function createAdminCards(tests){
+    const container = document.getElementById('admin-tests-container');
+    
+    tests.forEach(test => {
+        const card = document.createElement('div');
+        card.className = 'lib-card';
+        
+        card.innerHTML = `
+            <div>
+                <h4 class="h4 bold">${test.title}</h4>
+            </div>
+            <div>
+                <h4 class="h4 normal">${test.description}</h4>
+            </div>
+            <div class="row">
+            <a class="generate-btn approve-btn"><h4>Изменить</h4></a>
+            <button class="generate-btn approve-btn"><h4>Удалить</h4></button>
+            </div>
+            
+        `;
+        
+        container.appendChild(card);
     });
 }
 

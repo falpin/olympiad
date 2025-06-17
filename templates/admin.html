@@ -11,6 +11,8 @@
 	<script src="{{ url_for('static', filename='js/notification.js') }}" defer></script>
 	<script src="{{ url_for('static', filename='js/loading.js') }}" defer></script>
 	<script src="{{ url_for('static', filename='js/getUsers.js') }}" defer></script>
+	<script src="{{ url_for('static', filename='js/getTests.js') }}" defer></script>
+	<script src="{{ url_for('static', filename='js/create_test_and_answer.js') }}" defer></script>
 </head>
 <body>
 	<header>
@@ -45,9 +47,7 @@
 						<button class="menu-btn bold h5">Тесты</button>
 						<div>
 							<a href="#test" class="h6 iconoir-book-solid menu-icon">Список тестов</a>
-							<a href="#" class="h6 iconoir-plus-circle-solid menu-icon">Добавить</a>
-							<a href="#" class="h6 iconoir-page-edit menu-icon">Изменить</a>
-							<a href="#" class="h6 iconoir-minus-circle-solid menu-icon">Удалить</a>
+							<a href="#create_test" class="h6 iconoir-plus-circle-solid menu-icon">Создать</a>
 						</div>
 					</div>
 					<div class="members">
@@ -209,7 +209,12 @@
 					</div>
 				</div>
 
- 				<div class="menu-test" id="test" style="display: none;">
+				<div class="menu-st" id="test" style="display: none;">
+					<h2 class="h2 bold">Список тестов</h2>
+					<div id="admin-tests-container"></div>
+				</div>
+
+ 				<div class="menu-test" id="create_test" style="display: none;">
 					<h2 class="h2 bold">Создать тест</h2>
 					<form id="test-form">
 						<div class="form-group">
@@ -221,38 +226,19 @@
 							<textarea id="test-description" placeholder="Введите описание теста"></textarea>
 						</div>
 						<div class="form-group">
-							<label for="question-count" class="h6">Количество вопросов</label>
-							<input type="number" id="question-count" placeholder="Введите количество вопросов">
+							<label for="question-count" class="h6">Система оценивания</label>
+							<label for="question-count" class="h6">Сколько процентов нужно получить для нужной оценки</label>
+							<div class="row">
+								<input type="number" data-grade="5" placeholder="Оценка: 5" min="0" max="100" value="90" required>
+								<input type="number" data-grade="4" placeholder="Оценка: 4" min="0" max="100" value="80" required>
+								<input type="number" data-grade="3" placeholder="Оценка: 3" min="0" max="100" value="60" required>
+								<input type="number" data-grade="2" placeholder="Оценка: 2" min="0" max="100" value="50" required>
+							</div>
 						</div>
 
 						<h2 class="h5">Добавить вопросы</h2>
-						<div id="questions-container">
-							<div class="question-card">
-								<div class="form-group">
-									<label for="question-number" class="h6">Номер вопроса</label>
-									<input type="text" id="question-number" placeholder="Введите номер вопроса">
-								</div>
-
-								<div class="form-group">
-									<label for="question-text" class="h6">Текст вопроса</label>
-									<textarea id="question-text" placeholder="Введите текст вопроса"></textarea>
-								</div>
-
-								<div class="form-group">
-									<label class="h6">Варианты ответов</label>
-									<div id="answer-options">
-										<div class="answer-option">
-											<input type="text" placeholder="Введите вариант ответа">
-											<textarea placeholder="Введите описание варианта"></textarea>
-											<input type="checkbox" name="correct-answer">
-											<label class="h6">Правильный ответ?</label>
-										</div>
-									</div>
-									<button type="button" class="add-answer">Добавить вариант ответа</button>
-								</div>
-								<button type="button" class="add-question">Добавить вопрос</button>
-							</div>
-						</div>
+						<div id="questions-container"></div>
+						<button type="button" class="add-question">Добавить вопрос</button>
 						<button type="submit" class="content-btn bold">Сохранить тест</button>
 					</form>
 				</div>
@@ -262,7 +248,6 @@
 					<div style="margin-bottom: 20px;">
 						<input type="text" id="user-search" placeholder="Поиск по ФИО...">
 					</div>
-					
 				</div>
 
 				<div class="menu-st" id="part" style="display: none;">
@@ -290,7 +275,7 @@
 			</section>
 		</section>
 	</main>
-	<script src="../static/js/addVar.js"></script>
+	<!-- <script src="../static/js/addVar.js"></script> -->
 	<script src="../static/js/password.js"></script>
 	<script src="../static/js/blocks.js"></script>
 </body>
