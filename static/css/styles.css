@@ -762,4 +762,5 @@ form {
 	flex-direction: row;
 	gap: 20px;
 	justify-content: space-between;
+	margin: 20px 0;
 } 
