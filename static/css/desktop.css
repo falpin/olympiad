@@ -94,6 +94,7 @@
 	.content-btn {
 		font-size: var(--h5);
 		padding: 20px 100px;
+		margin-top: 60px;
 	}
 
 	.line {
