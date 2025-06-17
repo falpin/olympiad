@@ -30,8 +30,8 @@ def login():
 def olympiada(id):
 	return render_template('olympiada.html')
 
-@app.route('/online-olympiad')
-def do_olymp():
+@app.route('/online-olympiad/<int:id>')
+def do_olymp(id):
     return render_template('online-olympiad.html')
 
 @app.route('/news-page')
@@ -49,6 +49,10 @@ def teach_reg():
 @app.route('/tlogin')
 def teach_log():
     return render_template('tlogin.html')
+
+@app.route('/results')
+def results():
+    return render_template('results.html')
 
 @app.route('/test/<int:id>')
 def test(id):

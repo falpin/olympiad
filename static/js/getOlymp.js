@@ -90,7 +90,7 @@ function createTestCards(olympiads) {
             startTest(olympiadId)
                 .then(() => {
                     // После успешного начала теста перенаправляем на страницу теста
-                    window.location.href = `/olympiada/${olympiadId}`;
+                    window.location.href = `/online-olympiad/${olympiadId}`;
                 })
                 .catch(error => {
                     console.error('Ошибка при начале теста:', error);
