@@ -321,6 +321,7 @@ footer,
 .reg-inputs {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 40px;
 }
 
 .reg-inputs input {
