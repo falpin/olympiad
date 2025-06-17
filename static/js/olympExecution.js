@@ -240,7 +240,7 @@ function handleSubmit() {
         if (!response.ok) {
             return response.json().then(errorData => {
                 const errorMessage = errorData.error || 'Неизвестная ошибка';
-                console.error("Ошибка при отправке:", errorMessage);
+                console.error("Ошибка при отправке:", errorMessage);                
                 throw new Error(errorMessage);
             });
         }

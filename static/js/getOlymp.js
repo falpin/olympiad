@@ -29,7 +29,7 @@ function getOlymp() {
 function startTest(olympiadId) {
     const jwtToken = getCookie('jwt_token');
     const host = "https://olympiad-api.falpin.ru";
-    return fetch(`${host}/tests/${olympiadId}/start`, {
+    return fetch(`${host}/olympiads/${olympiadId}/start`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ function createOlympCards(olympiads) {
                 с <span>${olympiad.start_time}</span>
                 до <span>${olympiad.end_time}</span>
             </h4>
-            <a class="h5 test-link" href="#" data-test-id="${olympiad.id}">Выполнить олимпиаду</a>
+            <a class="h5 test-link" href="#" data-olymp-id="${olympiad.id}">Выполнить олимпиаду</a>
         `;
         console.log('Вставляем')
         container.appendChild(card);
@@ -86,7 +86,7 @@ function createOlympCards(olympiads) {
     document.querySelectorAll('.test-link').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            const olympiadId = this.getAttribute('data-test-id');
+            const olympiadId = this.getAttribute('data-olymp-id');
             
             startTest(olympiadId)
                 .then(() => {
@@ -94,9 +94,9 @@ function createOlympCards(olympiads) {
                     window.location.href = `/online-olympiad/${olympiadId}`;
                 })
                 .catch(error => {
-                    console.error('Ошибка при начале теста:', error);
-                    // Можно добавить уведомление пользователю об ошибке
-                    showNotification('Войдите, для прохождения теста');
+                    console.error('Ошибка при начале олимпиады:', olympiadId);
+                    console.log(error)
+                    showNotification('Вы не можете выполнить эту олимпиаду');
                 });
         });
     });
