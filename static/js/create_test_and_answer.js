@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Контейнеры элементов
-    const questionsContainer = document.getElementById('questions-container');
+    const questionsContainer = document.getElementById('questions-container-test');
     const testForm = document.getElementById('test-form');
 
     // Функция для получения cookie
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Добавление нового вопроса
-    document.querySelector('.add-question').addEventListener('click', () => {
+    document.querySelector('.add-question-tests').addEventListener('click', () => {
         const newQuestion = `
         <div class="question-card">
             <button type="button" class="remove-question">✕</button>

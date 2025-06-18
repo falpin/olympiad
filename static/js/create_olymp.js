@@ -32,6 +32,68 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+     // Добавление нового вопроса
+    document.querySelector('.add-question').addEventListener('click', () => {
+        const newQuestion = `
+        <div class="question-card">
+            <button type="button" class="remove-question">✕</button>
+            <div class="form-group">
+                <label class="h6">Текст вопроса</label>
+                <textarea class="question-text" placeholder="Введите текст вопроса"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label class="h6">Баллы за вопрос</label>
+                <input type="number" class="question-points" min="1" value="1">
+            </div>
+            
+            <div class="form-group">
+                <label class="h6">Тип вопроса</label>
+                <select class="question-type">
+                    <option value="single">Одиночный выбор</option>
+                    <option value="multiple">Множественный выбор</option>
+                    <option value="text">Текстовый ответ</option>
+                </select>
+            </div>
+            
+            <!-- Контейнер для вариантов ответов -->
+            <div class="answer-options-container">
+                <div class="form-group">
+                    <label class="h6">Варианты ответов</label>
+                    <div class="answer-options">
+                        <div class="answer-option">
+                            <input type="text" placeholder="Введите вариант ответа">
+                            <label>
+                                <input type="checkbox" class="correct-answer">
+                                Правильный ответ
+                            </label>
+                        </div>
+                    </div>
+                    <button type="button" class="add-answer">Добавить вариант</button>
+                </div>
+            </div>
+            
+            <!-- Контейнер для текстового ответа -->
+            <div class="text-answer-container" style="display: none;">
+                <div class="form-group">
+                    <label class="h6">Правильный ответ (текст)</label>
+                    <input type="text" class="correct-text-answer" placeholder="Введите правильный ответ">
+                </div>
+            </div>
+        </div>`;
+        
+        questionsContainer.insertAdjacentHTML('beforeend', newQuestion);
+        const newCard = questionsContainer.lastElementChild;
+        toggleAnswerFields(newCard);
+        
+        // Сброс стилей ошибок при вводе
+        newCard.querySelectorAll('input, textarea').forEach(input => {
+            input.addEventListener('input', () => {
+                input.style.border = '';
+            });
+        });
+    });
+
     // Обработка отправки формы
     testForm.addEventListener('submit', async (e) => {
         e.preventDefault();
